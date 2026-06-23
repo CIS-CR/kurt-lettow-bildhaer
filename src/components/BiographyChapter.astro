@@ -1,0 +1,24 @@
+---
+import type { BiographyChapter as Chapter } from "../data/biography";
+
+interface Props { chapter: Chapter; index: number; }
+const { chapter, index } = Astro.props;
+const reverse = index % 2 === 1;
+---
+
+<article class:list={["chapter", { reverse, "chapter-with-image": chapter.image }]} data-reveal>
+  <div class="chapter-index" aria-hidden="true">{chapter.number}</div>
+  <div class="chapter-copy">
+    <p class="eyebrow">Chapter {chapter.number}</p>
+    <h3>{chapter.title}</h3>
+    <p class="chapter-period">{chapter.period}</p>
+    <p>{chapter.summary}</p>
+    <span class="verification-label">Placeholder — verification required</span>
+  </div>
+  {chapter.image && (
+    <figure class="chapter-media">
+      <img src={chapter.image} alt={chapter.imageAlt} loading="lazy" />
+      <figcaption>Archival image placeholder</figcaption>
+    </figure>
+  )}
+</article>

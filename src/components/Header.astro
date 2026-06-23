@@ -1,0 +1,39 @@
+---
+const links = [
+  { href: "/#story", label: "Story" },
+  { href: "/#timeline", label: "Timeline" },
+  { href: "/#archive", label: "Archive" },
+  { href: "/#legacy", label: "Legacy" },
+  { href: "/#references", label: "References" },
+];
+const darkHeader = !["/", "/timeline"].includes(Astro.url.pathname);
+---
+
+<header class:list={["site-header", { "header-dark": darkHeader }]} data-header>
+  <div class="shell header-inner">
+    <a class="wordmark" href="/" aria-label="Kurt Lettow Bildhaer home">
+      <span class="wordmark-mark" aria-hidden="true">K</span>
+      <span>Kurt Lettow Bildhaer</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+      {links.map((link) => <a href={link.href}>{link.label}</a>)}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector(".site-nav");
+  toggle?.addEventListener("click", () => {
+    const open = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!open));
+    nav?.classList.toggle("is-open", !open);
+  });
+  nav?.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => {
+    toggle?.setAttribute("aria-expanded", "false");
+    nav.classList.remove("is-open");
+  }));
+</script>

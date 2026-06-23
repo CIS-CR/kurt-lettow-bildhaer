@@ -1,0 +1,31 @@
+---
+import { galleryItems } from "../data/gallery";
+---
+
+<section class="archive-section" id="archive" aria-labelledby="archive-title">
+  <div class="shell">
+    <div class="section-heading archive-heading" data-reveal>
+      <div>
+        <p class="eyebrow">The visual record</p>
+        <h2 id="archive-title">Archive</h2>
+      </div>
+      <p>A working collection for photographs, documents, letters, maps, and family records. Every item shown is placeholder material.</p>
+    </div>
+    <div class="archive-grid">
+      {galleryItems.map((item, index) => (
+        <article class:list={["archive-item", { featured: index === 0 || index === 3 }]} data-reveal>
+          <figure>
+            <img src={item.image} alt={item.alt} loading="lazy" style={`object-position:${item.position || "center"}`} />
+            <span>{String(index + 1).padStart(2, "0")}</span>
+          </figure>
+          <div class="archive-meta">
+            <p>{item.category} · {item.date}</p>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+    <a class="button button-outline" href="/archive">Explore the archive</a>
+  </div>
+</section>

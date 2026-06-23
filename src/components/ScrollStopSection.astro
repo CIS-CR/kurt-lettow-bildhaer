@@ -1,0 +1,19 @@
+---
+interface Props {
+  image: string;
+  alt: string;
+  quote: string;
+  label?: string;
+  align?: "left" | "right";
+}
+const { image, alt, quote, label = "On preservation", align = "left" } = Astro.props;
+---
+
+<section class:list={["scroll-stop", `align-${align}`]}>
+  <img src={image} alt={alt} loading="lazy" />
+  <div class="scroll-stop-shade"></div>
+  <div class="shell scroll-stop-inner" data-reveal>
+    <p class="eyebrow light">{label}</p>
+    <blockquote>{quote}</blockquote>
+  </div>
+</section>

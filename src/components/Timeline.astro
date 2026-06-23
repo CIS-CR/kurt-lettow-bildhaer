@@ -1,0 +1,25 @@
+---
+import { timelineEvents } from "../data/timeline";
+---
+
+<section class="timeline-section section-dark" id="timeline" aria-labelledby="timeline-title">
+  <div class="shell timeline-layout">
+    <div class="section-heading sticky-heading" data-reveal>
+      <p class="eyebrow light">A chronology in progress</p>
+      <h2 id="timeline-title">Life,<br />in time.</h2>
+      <p>Every date below is placeholder content awaiting verification against family records and historical sources.</p>
+      <a class="text-link light-link" href="/timeline">Open timeline view <span aria-hidden="true">→</span></a>
+    </div>
+    <ol class="timeline-list">
+      {timelineEvents.map((event, index) => (
+        <li class="timeline-item" data-reveal style={`--delay: ${index * 60}ms`}>
+          <time>{event.year}</time>
+          <div>
+            <h3>{event.title}</h3>
+            <p>{event.description}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
