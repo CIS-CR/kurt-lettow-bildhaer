@@ -10,15 +10,15 @@ interface Props {
 }
 
 const {
-  title = "Kurt Lettow Bildhaer | A Living Biography",
-  description = "A living biography preserving the life, memory, and historical legacy of Kurt Lettow Bildhaer.",
+  title = "Kurt Lettow | Bildhauer 1908-1992",
+  description = "Eine biografische und künstlerische Annäherung an das Werk des Bremer Bildhauers Kurt Lettow.",
   image = "/images/archive-documents-placeholder.webp",
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -32,7 +32,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={new URL(image, Astro.site)} />
-    <meta property="og:image:alt" content="Archival placeholder for the Kurt Lettow Bildhaer biography" />
+    <meta property="og:image:alt" content="Archivbild zum Werk des Bildhauers Kurt Lettow" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
@@ -40,7 +40,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <title>{title}</title>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
     <Header />
     <main id="main-content"><slot /></main>
     <Footer />

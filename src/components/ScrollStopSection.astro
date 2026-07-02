@@ -5,15 +5,19 @@ interface Props {
   quote: string;
   label?: string;
   align?: "left" | "right";
+  className?: string;
 }
-const { image, alt, quote, label = "On preservation", align = "left" } = Astro.props;
+const { image, alt, quote, label = "Zur Erinnerung", align = "left", className = "" } = Astro.props;
 ---
 
-<section class:list={["scroll-stop", `align-${align}`]}>
-  <img src={image} alt={alt} loading="lazy" />
+<section class:list={["scroll-stop", `align-${align}`, className]}>
+  <img class="parallax-media" src={image} alt={alt} loading="lazy" />
   <div class="scroll-stop-shade"></div>
   <div class="shell scroll-stop-inner" data-reveal>
     <p class="eyebrow light">{label}</p>
     <blockquote>{quote}</blockquote>
+    <div class="scroll-stop-copy">
+      <slot />
+    </div>
   </div>
 </section>

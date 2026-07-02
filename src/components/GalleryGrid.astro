@@ -2,14 +2,14 @@
 import { galleryItems } from "../data/gallery";
 ---
 
-<section class="archive-section" id="archive" aria-labelledby="archive-title">
+<section class="archive-section scroll-scene" id="archive" aria-labelledby="archive-title" data-scroll-scene="archive">
   <div class="shell">
     <div class="section-heading archive-heading" data-reveal>
       <div>
-        <p class="eyebrow">The visual record</p>
-        <h2 id="archive-title">Archive</h2>
+        <p class="eyebrow">Werk und Archiv</p>
+        <h2 id="archive-title">Ein Werk in vielen Materialien.</h2>
       </div>
-      <p>A working collection for photographs, documents, letters, maps, and family records. Every item shown is placeholder material.</p>
+      <p>Lettows Arbeiten umfassen christliche und weltliche Werke, Reliefs, Plastiken, Portale und Wandgestaltungen. Sie zeigen ein feines Spiel von Licht und Schatten, eine reduzierte Formensprache und eine stille Kraft, die Raum für Betrachtung und Interpretation lässt.</p>
     </div>
     <div class="archive-grid">
       {galleryItems.map((item, index) => (
@@ -26,6 +26,6 @@ import { galleryItems } from "../data/gallery";
         </article>
       ))}
     </div>
-    <a class="button button-outline" href="/archive">Explore the archive</a>
+    <a class="button button-outline" href="/archive">Archiv öffnen</a>
   </div>
 </section>

@@ -5,9 +5,44 @@ export type TimelineEvent = {
 };
 
 export const timelineEvents: TimelineEvent[] = [
-  { year: "1900", title: "Early Years", description: "Placeholder event. Replace the year and description with verified family or historical information." },
-  { year: "1920", title: "Family Origins", description: "Placeholder event for a documented family milestone, location, or relationship." },
-  { year: "1940", title: "Historical Period", description: "Placeholder event. Add historical context only when supported by a cited source." },
-  { year: "1960", title: "Personal Milestones", description: "Placeholder event for a verified personal, family, or professional milestone." },
-  { year: "1980", title: "Legacy Continues", description: "Placeholder event describing how memory and family records continued across generations." },
+  {
+    year: "1908",
+    title: "Geburt in Bremen",
+    description: "Kurt Lettow wird in Bremen geboren.",
+  },
+  {
+    year: "1930",
+    title: "Erster großer Auftrag",
+    description: "Mit 22 Jahren erhält er seinen ersten großen Auftrag: einen Orgelprospekt aus Lindenholz für die St. Ulrichkirche in Halle.",
+  },
+  {
+    year: "1931",
+    title: "Weitere frühe Arbeiten",
+    description: "Es folgen ein überlebensgroßes Kruzifix für den neuen katholischen Friedhof in Delmenhorst und weitere Arbeiten.",
+  },
+  {
+    year: "1945",
+    title: "Rückkehr und Neubeginn",
+    description: "Nach Krieg und Gefangenschaft kehrt Lettow krank zurück. Existenz und Atelier müssen neu aufgebaut werden.",
+  },
+  {
+    year: "Nach 1945",
+    title: "Kirchen, Schulen, öffentliche Räume",
+    description: "Neue Aufträge entstehen für Kirchen, Schulen und öffentliche Räume in Bremen und im norddeutschen Raum.",
+  },
+  {
+    year: "1961",
+    title: "Familiengeschichte",
+    description: "Seine Tochter Julia verlässt das Elternhaus, um Architektur zu studieren. Später führen Familienreisen nach Costa Rica und Mittelamerika.",
+  },
+  {
+    year: "1992",
+    title: "Tod am Geburtstag",
+    description: "Kurt Lettow stirbt am 24. April, seinem Geburtstag, im Alter von 84 Jahren.",
+  },
+  {
+    year: "Nach 1992",
+    title: "Dokumentation des Werkes",
+    description: "Julia van Wilpe beginnt, das Werk ihres Vaters neu zu erfassen, zu dokumentieren und sichtbar zu machen.",
+  },
 ];

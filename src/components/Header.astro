@@ -1,24 +1,26 @@
 ---
 const links = [
-  { href: "/#story", label: "Story" },
-  { href: "/#timeline", label: "Timeline" },
-  { href: "/#archive", label: "Archive" },
+  { href: "/#biografie", label: "Biografie" },
+  { href: "/#timeline", label: "Zeitleiste" },
+  { href: "/#atelier", label: "Atelier" },
+  { href: "/#archive", label: "Werk" },
+  { href: "/#buch", label: "Buch" },
   { href: "/#legacy", label: "Legacy" },
-  { href: "/#references", label: "References" },
+  { href: "/#kontakt", label: "Kontakt" },
 ];
 const darkHeader = !["/", "/timeline"].includes(Astro.url.pathname);
 ---
 
 <header class:list={["site-header", { "header-dark": darkHeader }]} data-header>
   <div class="shell header-inner">
-    <a class="wordmark" href="/" aria-label="Kurt Lettow Bildhaer home">
+    <a class="wordmark" href="/" aria-label="Startseite Kurt Lettow">
       <span class="wordmark-mark" aria-hidden="true">K</span>
-      <span>Kurt Lettow Bildhaer</span>
+      <span>Kurt Lettow</span>
     </a>
-    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+    <button class="menu-toggle" type="button" aria-label="Navigation öffnen" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span>
     </button>
-    <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+    <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
       {links.map((link) => <a href={link.href}>{link.label}</a>)}
     </nav>
   </div>

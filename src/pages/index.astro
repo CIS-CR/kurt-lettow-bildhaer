@@ -8,33 +8,40 @@ import ScrollStopSection from "../components/ScrollStopSection.astro";
 import { biographyChapters } from "../data/biography";
 ---
 
-<BaseLayout>
+<BaseLayout
+  title="Kurt Lettow | Bildhauer 1908-1992"
+  description="Eine biografische und künstlerische Annäherung an das Werk des Bremer Bildhauers Kurt Lettow."
+  image="/images/kurt-lettow-index.jpg"
+>
   <Hero />
 
-  <section class="introduction" id="introduction" aria-labelledby="intro-title">
+  <section class="introduction editorial-section" id="introduction" aria-labelledby="intro-title">
     <div class="shell intro-grid" data-reveal>
-      <p class="eyebrow">The purpose of this archive</p>
+      <p class="eyebrow">Ein Leben im Material</p>
       <div>
-        <h2 id="intro-title">A life remembered with care.</h2>
-        <p class="lead">This website is being prepared to preserve the life, story, and legacy of Kurt Lettow Bildhaer through verified family knowledge and historical documentation.</p>
-        <p class="placeholder-copy">Placeholder introduction. Replace this text with a reviewed account of the project’s purpose, its contributors, and the standards used to verify biographical material.</p>
+        <h2 id="intro-title">Kurt Lettow wurde 1908 in Bremen geboren und starb 1992 an seinem Geburtstag, dem 24. April, im Alter von 84 Jahren.</h2>
+        <p class="lead">Sein Werk entstand aus handwerklicher Präzision, künstlerischer Reduktion und einer tiefen Beziehung zum Material.</p>
+        <p>Holz, Stein, Ton, Keramik, Glas, Metall und Licht wurden für ihn zu Formen einer stillen, eindringlichen Sprache.</p>
       </div>
     </div>
   </section>
 
   <ScrollStopSection
     image="/images/archive-documents-placeholder.webp"
-    alt="Fictional archival documents used as a visual placeholder"
-    quote="A story worth preserving."
+    alt="Archivdokumente und Arbeitsmaterialien als Platzhalter für das Werk von Kurt Lettow"
+    quote="Das Werk blieb. In Kirchen, Schulen, Plätzen und Erinnerungen."
     label="The work of memory"
-  />
+    className="memory-banner scroll-scene scroll-scene--memory"
+  >
+    <p>Viele Jahre nach seiner Entstehung begann seine Tochter Julia van Wilpe, geb. Lettow, das Lebenswerk ihres Vaters neu zu erfassen, zu dokumentieren und zu fotografieren.</p>
+  </ScrollStopSection>
 
-  <section class="story-section" id="story" aria-labelledby="story-title">
+  <section class="biography story-section scroll-scene" id="biografie" aria-labelledby="biography-title">
     <div class="shell">
       <div class="section-heading story-heading" data-reveal>
-        <p class="eyebrow">Six chapters</p>
-        <h2 id="story-title">The biography</h2>
-        <p>A chapter structure ready to hold verified dates, places, family histories, and personal memories.</p>
+        <p class="eyebrow">Biografie</p>
+        <h2 id="biography-title">Ein Leben zwischen Handwerk, Kunst und öffentlichem Raum.</h2>
+        <p>Die Biografie entfaltet sich in Kapiteln: Ausbildung, erste Aufträge, Krieg, Rückkehr und ein Werk, das Norddeutschland geprägt hat.</p>
       </div>
       <div class="chapters">
         {biographyChapters.map((chapter, index) => <BiographyChapter chapter={chapter} index={index} />)}
@@ -46,45 +53,80 @@ import { biographyChapters } from "../data/biography";
 
   <ScrollStopSection
     image="/images/family-archive-placeholder.webp"
-    alt="Fictional family archive used as a visual placeholder"
-    quote="Memory becomes legacy when it is preserved."
+    alt="Familienarchiv als Platzhalter für die Dokumentation des Werkes von Kurt Lettow"
+    quote="Von Bremen nach Costa Rica, von der Erinnerung zur Dokumentation."
     label="Across generations"
     align="right"
-  />
+    className="generations-banner scroll-scene scroll-scene--generations"
+  >
+    <p>Als Julia van Wilpe später nach Costa Rica zog, blieben die Reisen nach Mittelamerika Teil der Familiengeschichte. Doch die Spur des Werkes führte sie immer wieder zurück nach Norddeutschland - zu Kirchen, Schulen, Plätzen und Wandreliefs ihres Vaters.</p>
+  </ScrollStopSection>
+
+  <section class="atelier scroll-scene" id="atelier" aria-labelledby="atelier-title">
+    <div class="shell atelier__layout">
+      <div class="atelier__media reveal-on-scroll" data-reveal>
+        <img src="/images/portrait-placeholder.webp" alt="Platzhalter für eine Atelieraufnahme oder ein Porträt von Kurt Lettow" loading="lazy" />
+      </div>
+      <div class="atelier__details" data-reveal>
+        <p class="eyebrow">Das Atelier</p>
+        <h2 id="atelier-title">In meinen jungen Jahren war das Bild meines Vaters in seinem weißen Arbeitskittel Teil des täglichen Lebens.</h2>
+        <p>Sein Arbeitszimmer und das große, helle Atelier mit Blick in den weitläufigen Garten, auf Teich, Rhododendron und Wald, sind bis heute Teil unseres Hauses Am Querkamp in Bremen-Oberneuland.</p>
+        <p>Hier roch es nach Holz, feuchtem Ton, Gips und Tabakrauch. Es gab Drehböcke, Staffeleien, Arbeitsbänke, Tonkisten, Werkzeuge aller Art - und eine Vielzahl von Modellen, Entwürfen und Skizzen.</p>
+      </div>
+    </div>
+  </section>
 
   <GalleryGrid />
 
-  <section class="legacy-section" id="legacy" aria-labelledby="legacy-title">
+  <section class="book-section scroll-scene" id="buch" aria-labelledby="book-title">
+    <div class="shell book-grid">
+      <div data-reveal>
+        <p class="eyebrow">Das Buch</p>
+        <h2 id="book-title">Kurt Lettow, Bildhauer, 1908-1992<br />Über die Grenzen Bremens hinaus</h2>
+        <p>Das Buch über das Lebenswerk des Bildhauers Kurt Lettow umfasst 240 Seiten, mehr als 400 farbige Abbildungen und erscheint als Hardcover.</p>
+        <p>Es zeigt das große christliche wie weltliche Werk Lettows, das im gesamten norddeutschen Raum zu finden ist. Mit Beiträgen aus Bremen von Kunsthistorikern, Denkmalpflegern, Pastoren und weiteren Fachleuten eröffnet es einen umfassenden Blick auf einen Künstler, dessen Werk weit über die Grenzen Bremens hinausreicht.</p>
+        <a class="button button-outline" href="/references">Publikation ansehen</a>
+      </div>
+      <aside class="book-facts" data-reveal>
+        <p>240 Seiten</p>
+        <p>Über 400 farbige Abbildungen</p>
+        <p>Hardcover</p>
+        <p>Mit Beiträgen von Dr. Frank Laukötter, Dr. Arie Hartog, Prof. Dr. Georg Skalecki, Pastor Kunze, Rebekka Schwiddessen und weiteren Fachleuten.</p>
+        <!-- TODO: Confirm spelling from original source: Frank Laukötter. -->
+      </aside>
+    </div>
+  </section>
+
+  <section class="legacy-section scroll-scene" id="legacy" aria-labelledby="legacy-title">
     <div class="shell legacy-inner" data-reveal>
-      <p class="eyebrow light">What remains</p>
-      <h2 id="legacy-title">His story continues through family, memory, and the preservation of a life that deserves to be remembered.</h2>
-      <p>This statement is proposed placeholder copy. It should be reviewed and approved by the family before publication.</p>
-      <span class="legacy-mark" aria-hidden="true">KLB</span>
+      <p class="eyebrow light">Das wiederentdeckte Werk</p>
+      <h2 id="legacy-title">Ich wusste, dass mein Vater ein bekannter und gefragter Künstler war. Doch das Ausmaß, die Vielfalt und die Größe seines Werkes wurden mir erst später bewusst.</h2>
+      <p>Heute betrete ich sein Atelier mit Andacht - und mit einer unstillbaren Neugier. Ich versuche, sein Werk zu erfassen, zu dokumentieren und sichtbar zu machen.</p>
+      <p class="legacy-signature">Julia van Wilpe, geb. Lettow<br />Tochter des Bildhauers</p>
+      <span class="legacy-mark" aria-hidden="true">KL</span>
     </div>
   </section>
 
-  <section class="references-section" id="references" aria-labelledby="references-title">
-    <div class="shell references-grid" data-reveal>
+  <section class="closing-section contact-section" id="kontakt" aria-labelledby="contact-title">
+    <div class="shell contact-grid" data-reveal>
       <div>
-        <p class="eyebrow">Notes & provenance</p>
-        <h2 id="references-title">References</h2>
+        <p class="eyebrow">Kontakt</p>
+        <h2 id="contact-title">Informationen, Hinweise und Kommentare zum Werk von Kurt Lettow sind willkommen.</h2>
+        <p>Prof. Julia van Wilpe, geb. Lettow<br />Architektin<br />Tochter des Bildhauers Kurt Lettow</p>
+        <a class="button" href="mailto:jvjvanwilpe@gmail.com?subject=Kurt%20Lettow%20Bildhauer">jvjvanwilpe@gmail.com</a>
       </div>
-      <div class="reference-list">
-        <p><span>01</span> Family interviews and contributions — contributors and dates to be added.</p>
-        <p><span>02</span> Archival documents — repository, collection, and reference numbers pending.</p>
-        <p><span>03</span> Published historical sources — full citations pending verification.</p>
-        <p><span>04</span> Photographs and letters — ownership and usage permissions to be documented.</p>
-        <a class="text-link" href="/references">View reference notes <span aria-hidden="true">→</span></a>
+      <div class="contact-details">
+        <article>
+          <h3>Costa Rica</h3>
+          <p>Universidad Autónoma de Centroamérica, UACA<br />Apartado 373<br />6150 Santa Ana<br />Costa Rica</p>
+          <p>00506 22827575</p>
+        </article>
+        <article>
+          <h3>Deutschland</h3>
+          <p>Am Querkamp 59<br />28355 Bremen<br />Deutschland</p>
+          <p>0049 421 259408</p>
+        </article>
       </div>
-    </div>
-  </section>
-
-  <section class="closing-section" aria-labelledby="closing-title">
-    <div class="shell closing-inner" data-reveal>
-      <p class="eyebrow">An open invitation</p>
-      <h2 id="closing-title">Preserving the life and legacy of Kurt Lettow Bildhaer.</h2>
-      <p>If you hold a photograph, document, memory, or correction that can strengthen this record, the archive is ready to listen.</p>
-      <a class="button" href="mailto:family@example.com?subject=Kurt%20Lettow%20Bildhaer%20Biography">Share Information / Contact</a>
     </div>
   </section>
 </BaseLayout>

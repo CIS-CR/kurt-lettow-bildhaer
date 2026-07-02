@@ -2,13 +2,13 @@
 import { timelineEvents } from "../data/timeline";
 ---
 
-<section class="timeline-section section-dark" id="timeline" aria-labelledby="timeline-title">
+<section class="timeline-section section-dark scroll-scene" id="timeline" aria-labelledby="timeline-title" data-scroll-scene="timeline">
   <div class="shell timeline-layout">
     <div class="section-heading sticky-heading" data-reveal>
-      <p class="eyebrow light">A chronology in progress</p>
-      <h2 id="timeline-title">Life,<br />in time.</h2>
-      <p>Every date below is placeholder content awaiting verification against family records and historical sources.</p>
-      <a class="text-link light-link" href="/timeline">Open timeline view <span aria-hidden="true">→</span></a>
+      <p class="eyebrow light">Zeitleiste</p>
+      <h2 id="timeline-title">Stationen eines Lebens und Werkes.</h2>
+      <p>Eine verdichtete Chronologie von Ausbildung, Werk, Neubeginn und Wiederentdeckung.</p>
+      <a class="text-link light-link" href="/timeline">Zeitleiste öffnen <span aria-hidden="true">→</span></a>
     </div>
     <ol class="timeline-list">
       {timelineEvents.map((event, index) => (
