@@ -202,7 +202,7 @@ h3 { font-size: 28px; }
   position: absolute;
   inset: 0;
 }
-.memory-section__background { z-index: -4; overflow: hidden; }
+.memory-section__background { z-index: 0; overflow: hidden; }
 .memory-section__background img,
 .memory-section__texture img {
   width: 100%;
@@ -215,7 +215,7 @@ h3 { font-size: 28px; }
   will-change: transform;
 }
 .memory-section__texture {
-  z-index: -2;
+  z-index: 1;
   opacity: .12;
   mix-blend-mode: soft-light;
   pointer-events: none;
@@ -225,7 +225,7 @@ h3 { font-size: 28px; }
   filter: grayscale(1) contrast(1.08);
 }
 .memory-section__shade {
-  z-index: -1;
+  z-index: 2;
   background:
     radial-gradient(circle at 73% 43%, rgba(230,214,170,.1), rgba(230,214,170,0) 24%),
     linear-gradient(90deg, rgba(10,13,12,.9) 0%, rgba(10,13,12,.76) 36%, rgba(10,13,12,.28) 70%, rgba(10,13,12,.66) 100%),
@@ -233,7 +233,7 @@ h3 { font-size: 28px; }
 }
 .memory-section__inner {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   padding: 140px 0;
 }
 .memory-section__content {
@@ -285,7 +285,7 @@ h3 { font-size: 28px; }
 }
 .memory-section__floating {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   margin: 0;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.16);
