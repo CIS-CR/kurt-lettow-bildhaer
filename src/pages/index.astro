@@ -6,6 +6,8 @@ import Timeline from "../components/Timeline.astro";
 import GalleryGrid from "../components/GalleryGrid.astro";
 import ScrollStopSection from "../components/ScrollStopSection.astro";
 import { biographyChapters } from "../data/biography";
+
+const memoryHighlights = ["Norddeutschland", "Kirchen", "Schulen", "Plätze", "Portale", "Wandreliefs", "Dokumentation"];
 ---
 
 <BaseLayout
@@ -26,15 +28,39 @@ import { biographyChapters } from "../data/biography";
     </div>
   </section>
 
-  <ScrollStopSection
-    image="/images/archive-documents-placeholder.webp"
-    alt="Archivdokumente und Arbeitsmaterialien als Platzhalter für das Werk von Kurt Lettow"
-    quote="Das Werk blieb. In Kirchen, Schulen, Plätzen und Erinnerungen."
-    label="The work of memory"
-    className="memory-banner scroll-scene scroll-scene--memory"
-  >
-    <p>Viele Jahre nach seiner Entstehung begann seine Tochter Julia van Wilpe, geb. Lettow, das Lebenswerk ihres Vaters neu zu erfassen, zu dokumentieren und zu fotografieren.</p>
-  </ScrollStopSection>
+  <section class="memory-section scroll-scene scroll-scene--memory" aria-labelledby="memory-title" data-scroll-scene="memory">
+    <div class="memory-section__background">
+      <img src="/images/memory/kurt-lettow-memory-relief.jpg" alt="Werk von Kurt Lettow im architektonischen Raum" loading="lazy" data-memory-background />
+    </div>
+    <div class="memory-section__texture" aria-hidden="true">
+      <img src="/images/memory/memory-archive-texture.jpg" alt="" loading="lazy" data-memory-texture />
+    </div>
+    <div class="memory-section__shade" aria-hidden="true"></div>
+
+    <figure class="memory-section__floating memory-section__floating--detail" data-memory-detail>
+      <img src="/images/memory/memory-work-detail-01.jpg" alt="Detail einer bildhauerischen Arbeit von Kurt Lettow" loading="lazy" width="1400" height="1000" />
+    </figure>
+    <figure class="memory-section__floating memory-section__floating--document" data-memory-document>
+      <img src="/images/memory/memory-document-01.jpg" alt="Archivdokument zum Lebenswerk von Kurt Lettow" loading="lazy" width="1200" height="900" />
+    </figure>
+
+    <div class="shell memory-section__inner">
+      <div class="memory-section__content">
+        <p class="memory-section__eyebrow eyebrow light" data-memory-reveal>Das Werk der Erinnerung</p>
+        <h2 id="memory-title" class="memory-section__title" data-memory-reveal>Das Werk blieb.</h2>
+        <p class="memory-section__subtitle" data-memory-reveal>In Kirchen, Schulen, Plätzen und Erinnerungen.</p>
+        <p class="memory-section__text" data-memory-reveal>Viele Jahre nach seiner Entstehung begann Julia van Wilpe, geb. Lettow, das Lebenswerk ihres Vaters neu zu erfassen, zu dokumentieren und zu fotografieren.</p>
+        <p class="memory-section__support" data-memory-reveal>Eine Reise durch Städte und Dörfer Norddeutschlands - auf der Suche nach Plastiken, Portalen und majestätischen Wandreliefs.</p>
+        <div class="memory-section__highlights" aria-label="Thematische Schwerpunkte">
+          {memoryHighlights.map((highlight) => <span class="memory-section__chip" data-memory-chip>{highlight}</span>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import "../scripts/memory-scroll";
+  </script>
 
   <section class="biography story-section scroll-scene" id="biografie" aria-labelledby="biography-title">
     <div class="shell">
