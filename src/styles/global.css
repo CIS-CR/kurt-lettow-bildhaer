@@ -122,6 +122,50 @@ h3 { font-size: 28px; }
 .hero-kicker { margin-bottom: 20px; color: rgba(255,255,255,.8); font-size: 13px; font-weight: 700; text-transform: uppercase; }
 .hero-deck { max-width: 560px; margin-bottom: 0; font-family: var(--serif); font-size: 27px; color: rgba(255,255,255,.88); }
 .hero--scroll-ready [data-hero-reveal] { opacity: 0; visibility: hidden; }
+.hero__progress {
+  position: absolute;
+  left: max(40px, calc((100vw - var(--shell)) / 2));
+  right: max(40px, calc((100vw - var(--shell)) / 2));
+  bottom: 38px;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: auto minmax(160px, 1fr);
+  gap: 18px;
+  align-items: center;
+  color: rgba(255,255,255,.58);
+  pointer-events: none;
+}
+.hero__progress-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.hero__progress-track {
+  position: relative;
+  height: 1px;
+  overflow: visible;
+  background: rgba(255,255,255,.22);
+}
+.hero__progress-fill,
+.hero__progress-glow {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+.hero__progress-fill {
+  height: 1px;
+  background: #e6d6aa;
+}
+.hero__progress-glow {
+  top: -5px;
+  height: 11px;
+  background: linear-gradient(90deg, rgba(230,214,170,0), rgba(230,214,170,.42), rgba(230,214,170,0));
+  filter: blur(6px);
+  opacity: .2;
+}
 .hero-actions { display: flex; align-items: center; gap: 24px; }
 .hero-note { max-width: 500px; margin: 24px 0 0; color: rgba(255,255,255,.66); }
 .scroll-cue { position: absolute; z-index: 3; bottom: 30px; right: 40px; width: 34px; height: 54px; border: 1px solid rgba(255,255,255,.5); }
@@ -318,6 +362,7 @@ h3 { font-size: 28px; }
   .hero-dates { font-size: 21px; }
   .hero-kicker { font-size: 11px; }
   .hero-deck { font-size: 18px; }
+  .hero__progress { display: none; }
   .hero-actions { align-items: flex-start; flex-direction: column; }
   .scroll-cue { display: none; }
   .introduction, .story-section, .timeline-section, .archive-section, .references-section, .closing-section, .atelier, .book-section { padding: 86px 0; }
