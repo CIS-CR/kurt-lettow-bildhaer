@@ -7,7 +7,8 @@ import GalleryGrid from "../components/GalleryGrid.astro";
 import ScrollStopSection from "../components/ScrollStopSection.astro";
 import { biographyChapters } from "../data/biography";
 
-const memoryHighlights = ["Norddeutschland", "Kirchen", "Schulen", "Plätze", "Portale", "Wandreliefs", "Dokumentation"];
+const memoryHighlights = ["Bremerhaven", "Norddeutschland", "Kirchen", "Schulen", "Plätze", "Portale", "Wandreliefs", "Dokumentation"];
+const archiveHighlights = ["Reliefs", "Plastiken", "Portale", "Wandreliefs", "Kirchenräume", "Skizzen", "Gipsmodelle", "Dokumente", "Sgraffito", "Emaille", "Mosaik", "Glas", "Metall"];
 ---
 
 <BaseLayout
@@ -19,10 +20,10 @@ const memoryHighlights = ["Norddeutschland", "Kirchen", "Schulen", "Plätze", "P
 
   <section class="introduction editorial-section" id="introduction" aria-labelledby="intro-title">
     <div class="shell intro-grid" data-reveal>
-      <p class="eyebrow">Ein Leben im Material</p>
+      <p class="eyebrow">Hommage und Wiederentdeckung</p>
       <div>
-        <h2 id="intro-title">Kurt Lettow wurde 1908 in Bremen geboren und starb 1992 an seinem Geburtstag, dem 24. April, im Alter von 84 Jahren.</h2>
-        <p class="lead">Sein Werk entstand aus handwerklicher Präzision, künstlerischer Reduktion und einer tiefen Beziehung zum Material.</p>
+        <h2 id="intro-title">Diese Website ist dem Bildhauer Kurt Lettow gewidmet - einem Künstler, dessen Werk weit über Bremen hinausreicht und heute neu entdeckt, dokumentiert und sichtbar gemacht wird.</h2>
+        <p class="lead">Kurt Lettow wurde 1908 in Bremen geboren und starb 1992 an seinem Geburtstag, dem 24. April. Sein Werk entstand aus handwerklicher Präzision, künstlerischer Reduktion und einer tiefen Beziehung zum Material.</p>
         <p>Holz, Stein, Ton, Keramik, Glas, Metall und Licht wurden für ihn zu Formen einer stillen, eindringlichen Sprache.</p>
       </div>
     </div>
@@ -49,8 +50,8 @@ const memoryHighlights = ["Norddeutschland", "Kirchen", "Schulen", "Plätze", "P
         <p class="memory-section__eyebrow eyebrow light" data-memory-reveal>Das Werk der Erinnerung</p>
         <h2 id="memory-title" class="memory-section__title" data-memory-reveal>Das Werk blieb.</h2>
         <p class="memory-section__subtitle" data-memory-reveal>In Kirchen, Schulen, Plätzen und Erinnerungen.</p>
-        <p class="memory-section__text" data-memory-reveal>Viele Jahre nach seiner Entstehung begann Julia van Wilpe, geb. Lettow, das Lebenswerk ihres Vaters neu zu erfassen, zu dokumentieren und zu fotografieren.</p>
-        <p class="memory-section__support" data-memory-reveal>Eine Reise durch Städte und Dörfer Norddeutschlands - auf der Suche nach Plastiken, Portalen und majestätischen Wandreliefs.</p>
+        <p class="memory-section__text" data-memory-reveal>Als Julia van Wilpe im Sommer 2010 in Costa Rica von den Abrissplänen einer Kirche in Bremerhaven erfuhr - und davon, dass ein großes Relief ihres Vaters verschwinden sollte - begann eine Suche.</p>
+        <p class="memory-section__support" data-memory-reveal>Aus diesem Moment entstand der Wunsch, die erhaltenen Werke Kurt Lettows aufzuspüren, zu fotografieren, zu ordnen und sichtbar zu machen. Eine Reise durch Städte und Dörfer Norddeutschlands begann: zu Kirchen, Schulen, Plätzen, Portalen und majestätischen Wandreliefs.</p>
         <div class="memory-section__highlights" aria-label="Thematische Schwerpunkte">
           {memoryHighlights.map((highlight) => <span class="memory-section__chip" data-memory-chip>{highlight}</span>)}
         </div>
@@ -75,6 +76,25 @@ const memoryHighlights = ["Norddeutschland", "Kirchen", "Schulen", "Plätze", "P
     </div>
   </section>
 
+  <section class="form-language-section editorial-section" id="formensprache" aria-labelledby="form-language-title">
+    <div class="shell form-language-grid">
+      <div class="form-language-copy" data-reveal>
+        <p class="eyebrow">Die Sprache der Form</p>
+        <h2 id="form-language-title">Vom erzählerischen Detail zur reduzierten Präsenz.</h2>
+        <p>In den 1930er Jahren experimentierte Kurt Lettow mit unterschiedlichen Formen und Motiven, zwischen naturalistischer und expressiver Darstellung.</p>
+        <p>Typisch für die Nachkriegszeit wurden vergrößerte Köpfe und ausdrucksstarke, große Augen ohne Iris und Pupille. Die Figuren und ihre Attribute blieben detailreich, doch ihre Formensprache wurde zunehmend vereinfacht.</p>
+        <p>Ob in Keramik, Holz, Stein oder Emaille, ob als Sgraffito, Plastik oder Relief: Lettow entwickelte eine Sprache, in der narrative Details nach und nach zurücktraten und die Figuren stärker für sich selbst standen.</p>
+      </div>
+      <figure class="form-language-media" data-reveal>
+        <img src="/images/memory/memory-work-detail-01.jpg" alt="Detail einer bildhauerischen Arbeit von Kurt Lettow" loading="lazy" width="1400" height="1000" />
+      </figure>
+      <aside class="form-language-note" data-reveal>
+        <p>In den Arbeiten der 1960er Jahre beginnt eine neue Phase. Haltung, Gesichtsausdruck und Geste tragen nun die Bedeutung der Figur.</p>
+        <p>Das Spätwerk zeigt einen Bildhauer, dem es gelang, den thematischen Gehalt seiner Figuren in Haltung und Form zu verdichten.</p>
+      </aside>
+    </div>
+  </section>
+
   <Timeline />
 
   <ScrollStopSection
@@ -86,6 +106,7 @@ const memoryHighlights = ["Norddeutschland", "Kirchen", "Schulen", "Plätze", "P
     className="generations-banner scroll-scene scroll-scene--generations"
   >
     <p>Als Julia van Wilpe später nach Costa Rica zog, blieben die Reisen nach Mittelamerika Teil der Familiengeschichte. Doch die Spur des Werkes führte sie immer wieder zurück nach Norddeutschland - zu Kirchen, Schulen, Plätzen und Wandreliefs ihres Vaters.</p>
+    <p>Aus der Distanz entstand ein neuer Blick: auf das Atelier, die Modelle, die Fotografien und die Orte, an denen das Werk weiterlebt.</p>
   </ScrollStopSection>
 
   <section class="atelier scroll-scene" id="atelier" aria-labelledby="atelier-title">
@@ -97,37 +118,60 @@ const memoryHighlights = ["Norddeutschland", "Kirchen", "Schulen", "Plätze", "P
         <p class="eyebrow">Das Atelier</p>
         <h2 id="atelier-title">In meinen jungen Jahren war das Bild meines Vaters in seinem weißen Arbeitskittel Teil des täglichen Lebens.</h2>
         <p>Sein Arbeitszimmer und das große, helle Atelier mit Blick in den weitläufigen Garten, auf Teich, Rhododendron und Wald, sind bis heute Teil unseres Hauses Am Querkamp in Bremen-Oberneuland.</p>
-        <p>Hier roch es nach Holz, feuchtem Ton, Gips und Tabakrauch. Es gab Drehböcke, Staffeleien, Arbeitsbänke, Tonkisten, Werkzeuge aller Art - und eine Vielzahl von Modellen, Entwürfen und Skizzen.</p>
+        <p>Hier roch es nach Holz, feuchtem Ton, Gips und Tabakrauch. Es gab Drehböcke, Staffeleien, Arbeitsbänke, Tonkisten, eine Arbeitswand aus Holz, Werkzeuge aller Art - und eine Vielzahl von Modellen, Entwürfen und Skizzen.</p>
+        <p>Ich wusste, dass er ein bekannter und gefragter Künstler war. Doch das Ausmaß, die Vielfalt und die Größe seines Werkes wurden mir erst später bewusst.</p>
+        <p class="atelier__signature">Julia van Wilpe, geb. Lettow</p>
       </div>
     </div>
   </section>
 
-  <GalleryGrid />
+  <GalleryGrid highlights={archiveHighlights} />
 
   <section class="book-section scroll-scene" id="buch" aria-labelledby="book-title">
     <div class="shell book-grid">
       <div data-reveal>
         <p class="eyebrow">Das Buch</p>
         <h2 id="book-title">Kurt Lettow, Bildhauer, 1908-1992<br />Über die Grenzen Bremens hinaus</h2>
-        <p>Das Buch über das Lebenswerk des Bildhauers Kurt Lettow umfasst 240 Seiten, mehr als 400 farbige Abbildungen und erscheint als Hardcover.</p>
-        <p>Es zeigt das große christliche wie weltliche Werk Lettows, das im gesamten norddeutschen Raum zu finden ist. Mit Beiträgen aus Bremen von Kunsthistorikern, Denkmalpflegern, Pastoren und weiteren Fachleuten eröffnet es einen umfassenden Blick auf einen Künstler, dessen Werk weit über die Grenzen Bremens hinausreicht.</p>
+        <p>Aus der Suche nach den erhaltenen Werken entstand das Buch „Kurt Lettow, Bildhauer, 1908-1992. Über die Grenzen Bremens hinaus“.</p>
+        <p>Es umfasst 240 Seiten und 400 farbige Abbildungen und erschien begleitend zur Ausstellung „Nachkriegskirchenkunst Ästhetik: Lettow“ in der Kulturkirche St. Stephani in Bremen, die vom 7. Juni bis zum 26. August 2012 gezeigt wurde.</p>
+        <p>Das Buch dokumentiert das große christliche wie weltliche Werk Lettows im norddeutschen Raum und macht die Vielfalt seiner Materialien, Orte und Formen sichtbar.</p>
         <a class="button button-outline" href="/references">Publikation ansehen</a>
       </div>
       <aside class="book-facts" data-reveal>
+        <p>Kurt Lettow, Bildhauer, 1908-1992<br />Über die Grenzen Bremens hinaus</p>
         <p>240 Seiten</p>
-        <p>Über 400 farbige Abbildungen</p>
+        <p>400 farbige Abbildungen</p>
         <p>Hardcover</p>
-        <p>Mit Beiträgen von Dr. Frank Laukötter, Dr. Arie Hartog, Prof. Dr. Georg Skalecki, Pastor Kunze, Rebekka Schwiddessen und weiteren Fachleuten.</p>
+        <p>Rasch-Verlag, 2012</p>
+        <p>Mit Beiträgen von Dr. Frank Laukötter, Dr. Arie Hartog, Prof. Dr. Georg Skalecki, Pastor Achim Kunze, Rebekka Schwiddessen und weiteren Fachleuten.</p>
         <!-- TODO: Confirm spelling from original source: Frank Laukötter. -->
       </aside>
+    </div>
+  </section>
+
+  <section class="exhibition-section editorial-section" id="ausstellung" aria-labelledby="exhibition-title">
+    <div class="shell exhibition-grid">
+      <div data-reveal>
+        <p class="eyebrow">Die Ausstellung</p>
+        <h2 id="exhibition-title">Nachkriegskirchenkunst Ästhetik: Lettow</h2>
+      </div>
+      <div class="exhibition-copy" data-reveal>
+        <p class="lead">Vom 7. Juni bis zum 26. August 2012 wurde die Ausstellung „Nachkriegskirchenkunst Ästhetik: Lettow“ in der Kulturkirche St. Stephani in Bremen gezeigt.</p>
+        <p>Sie war dem Werk des Bremer Bildhauers Kurt Lettow gewidmet und wurde vom Team des Gerhard-Marcks-Hauses unterstützt, von Direktor Dr. Arie Hartog konzipiert und von der Kunsthistorikerin Rebekka Schwiddessen kuratiert.</p>
+        <p>Möglich wurde sie durch Pastor Achim Kunze, Projektleiter der Kulturkirche St. Stephani, und sein Team.</p>
+        <p>Sieben Originalwerke gaben einen Überblick über verschiedene Werkphasen von 1931 bis 1964. Ergänzt wurden sie durch zahlreiche Gipsmodelle und Arbeitsmodelle, die die Entwicklung des Bildhauers über fünf Jahrzehnte sichtbar machten.</p>
+        <p class="exhibition-closing">Lettow steht für eine Generation von Künstlern, die in den vergangenen Jahrzehnten vielfach in Vergessenheit geraten ist.</p>
+      </div>
     </div>
   </section>
 
   <section class="legacy-section scroll-scene" id="legacy" aria-labelledby="legacy-title">
     <div class="shell legacy-inner" data-reveal>
       <p class="eyebrow light">Das wiederentdeckte Werk</p>
-      <h2 id="legacy-title">Ich wusste, dass mein Vater ein bekannter und gefragter Künstler war. Doch das Ausmaß, die Vielfalt und die Größe seines Werkes wurden mir erst später bewusst.</h2>
-      <p>Heute betrete ich sein Atelier mit Andacht - und mit einer unstillbaren Neugier. Ich versuche, sein Werk zu erfassen, zu dokumentieren und sichtbar zu machen.</p>
+      <h2 id="legacy-title">Ich wusste, dass mein Vater ein bekannter und gefragter Künstler war und dass seine Arbeiten bewundert wurden.</h2>
+      <p>Doch das Ausmaß, die Vielfalt und die Größe seines Werkes wurden mir erst bewusst, als er nicht mehr an unserer Seite war.</p>
+      <p>Heute betrete ich sein Atelier mit Andacht - und diese Andacht verwandelt sich bald in eine unstillbare Neugier.</p>
+      <p>Ich versuche, sein Werk zu erfassen, zu dokumentieren und sichtbar zu machen. Dabei wächst in mir eine tiefe Bewunderung für meinen Vater, den Künstler.</p>
       <p class="legacy-signature">Julia van Wilpe, geb. Lettow<br />Tochter des Bildhauers</p>
       <span class="legacy-mark" aria-hidden="true">KL</span>
     </div>
@@ -140,6 +184,7 @@ const memoryHighlights = ["Norddeutschland", "Kirchen", "Schulen", "Plätze", "P
         <h2 id="contact-title">Informationen, Hinweise und Kommentare zum Werk von Kurt Lettow sind willkommen.</h2>
         <p>Prof. Julia van Wilpe, geb. Lettow<br />Architektin<br />Tochter des Bildhauers Kurt Lettow</p>
         <a class="button" href="mailto:jvjvanwilpe@gmail.com?subject=Kurt%20Lettow%20Bildhauer">jvjvanwilpe@gmail.com</a>
+        <p class="contact-website"><a href="https://www.juliavanwilpearquitecta.com" rel="noreferrer">www.juliavanwilpearquitecta.com</a></p>
       </div>
       <div class="contact-details">
         <article>

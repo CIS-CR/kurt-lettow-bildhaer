@@ -41,8 +41,13 @@ export const timelineEvents: TimelineEvent[] = [
     description: "Kurt Lettow stirbt am 24. April, seinem Geburtstag, im Alter von 84 Jahren.",
   },
   {
-    year: "Nach 1992",
-    title: "Dokumentation des Werkes",
-    description: "Julia van Wilpe beginnt, das Werk ihres Vaters neu zu erfassen, zu dokumentieren und sichtbar zu machen.",
+    year: "2010",
+    title: "Der Beginn der Suche",
+    description: "Julia van Wilpe erfährt in Costa Rica von den Abrissplänen einer Kirche in Bremerhaven und dem gefährdeten Relief ihres Vaters. Die systematische Suche nach den erhaltenen Werken beginnt.",
+  },
+  {
+    year: "2012",
+    title: "Ausstellung und Buch",
+    description: "Die Ausstellung \"Nachkriegskirchenkunst Ästhetik: Lettow\" wird in der Kulturkirche St. Stephani in Bremen gezeigt. Begleitend erscheint das Buch über sein Lebenswerk.",
   },
 ];

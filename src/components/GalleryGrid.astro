@@ -1,5 +1,11 @@
 ---
 import { galleryItems } from "../data/gallery";
+
+interface Props {
+  highlights?: string[];
+}
+
+const { highlights = [] } = Astro.props;
 ---
 
 <section class="archive-section scroll-scene" id="archive" aria-labelledby="archive-title" data-scroll-scene="archive">
@@ -9,8 +15,22 @@ import { galleryItems } from "../data/gallery";
         <p class="eyebrow">Werk und Archiv</p>
         <h2 id="archive-title">Ein Werk in vielen Materialien.</h2>
       </div>
-      <p>Lettows Arbeiten umfassen christliche und weltliche Werke, Reliefs, Plastiken, Portale und Wandgestaltungen. Sie zeigen ein feines Spiel von Licht und Schatten, eine reduzierte Formensprache und eine stille Kraft, die Raum für Betrachtung und Interpretation lässt.</p>
+      <div class="archive-intro">
+        <p>Der Wirkungskreis des Künstlers reicht weit über die Grenzen Bremens hinaus. Seine großen religiösen und weltlichen Werke finden sich im gesamten norddeutschen Raum.</p>
+        <p>Man entdeckt darin den persönlichen Stil eines Bildhauers mit großer Begabung für Reliefs und einem außergewöhnlichen Verständnis für die Fernwirkung von Plastik im architektonischen Zusammenhang.</p>
+      </div>
     </div>
+    <div class="archive-prose" data-reveal>
+      <p>Mit großer Ausdruckskraft und handwerklichem Können arbeitete Lettow bis ins hohe Alter in verschiedenen Materialien: Ton, Holz, Stein, Keramik, Sgraffito, Emaille, Mosaik, Gips, Glas und Metall.</p>
+      <p>Die erhaltenen Gipsmodelle geben einen ungewöhnlichen Einblick in die Entstehung dieses Werkes. Der Nachlass Kurt Lettows enthält nahezu alle Arbeiten in Modellform.</p>
+      <p>Diese Modelle zeigen unterschiedliche Phasen: erste Entwürfe zu Komposition, Proportion und räumlichem Zusammenhang, aber auch Modelle, die mithilfe einer Punktiermaschine in Holz oder Stein übertragen wurden.</p>
+      <p>Fotografien, Skizzen und zahlreiche Dokumente machen den Weg vom Auftrag bis zur Ausführung nachvollziehbar und vermitteln einen Eindruck von den Bedingungen, unter denen Lettow arbeitete.</p>
+    </div>
+    {highlights.length > 0 && (
+      <div class="archive-highlights" aria-label="Archivkategorien" data-reveal>
+        {highlights.map((highlight) => <span>{highlight}</span>)}
+      </div>
+    )}
     <div class="archive-grid">
       {galleryItems.map((item, index) => (
         <article class:list={["archive-item", { featured: index === 0 || index === 3 }]} data-reveal>
@@ -26,6 +46,7 @@ import { galleryItems } from "../data/gallery";
         </article>
       ))}
     </div>
+    <p class="archive-closing" data-reveal>Seine Werke ziehen die Menschen durch ihren klaren, verinnerlichten Stil in ihren Bann.</p>
     <a class="button button-outline" href="/archive">Archiv öffnen</a>
   </div>
 </section>
