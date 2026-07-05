@@ -434,7 +434,8 @@ h3 { font-size: 28px; }
 }
 .biography__image {
   width: 100%;
-  aspect-ratio: 7 / 5;
+  max-height: 720px;
+  aspect-ratio: 5 / 7;
   object-fit: cover;
   filter: saturate(.72) contrast(.96);
   transform: scale(.985);
@@ -662,7 +663,7 @@ h3 { font-size: 28px; }
   .biography__chapter { min-height: 0; gap: 26px; padding-top: 46px; }
   .biography__chapter-number { font-size: 34px; }
   .biography__content h3 { font-size: 37px; }
-  .biography__image { aspect-ratio: 4 / 3; }
+  .biography__image { max-height: 640px; aspect-ratio: 5 / 7; }
   .biography__chapter-text p { font-size: 16px; }
   .timeline-item { grid-template-columns: 80px 1fr; gap: 18px; }
   .timeline-item time { font-size: 23px; }
