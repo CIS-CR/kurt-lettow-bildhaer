@@ -23,6 +23,14 @@ const darkHeader = !["/", "/timeline"].includes(Astro.url.pathname);
     <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
       {links.map((link) => <a href={link.href}>{link.label}</a>)}
     </nav>
+    <label class="language-switcher" for="language-select">
+      <span>Sprache</span>
+      <select id="language-select" aria-label="Sprache auswählen" data-language-select>
+        <option value="de">DE</option>
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+      </select>
+    </label>
   </div>
 </header>
 
@@ -38,4 +46,8 @@ const darkHeader = !["/", "/timeline"].includes(Astro.url.pathname);
     toggle?.setAttribute("aria-expanded", "false");
     nav.classList.remove("is-open");
   }));
+  document.querySelector("[data-language-select]")?.addEventListener("change", () => {
+    toggle?.setAttribute("aria-expanded", "false");
+    nav?.classList.remove("is-open");
+  });
 </script>

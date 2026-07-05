@@ -6,18 +6,29 @@ const { chapter, index } = Astro.props;
 const reverse = index % 2 === 1;
 ---
 
-<article class:list={["chapter", { reverse, "chapter-with-image": chapter.image }]} data-reveal>
-  <div class="chapter-index" aria-hidden="true">{chapter.number}</div>
-  <div class="chapter-copy biography__text reveal-on-scroll">
-    <p class="eyebrow">Kapitel {chapter.number}</p>
+<article class:list={["biography__chapter", "reveal-on-scroll", { "biography__chapter--reverse": reverse }]} data-reveal>
+  <div class="biography__content">
+    <div class="biography__meta">
+      <span class="biography__chapter-number" aria-hidden="true">{chapter.number}</span>
+      <span class="biography__chapter-label">{chapter.label}</span>
+    </div>
     <h3>{chapter.title}</h3>
     <p class="chapter-period">{chapter.period}</p>
-    <p>{chapter.summary}</p>
+    <div class="biography__chapter-text">
+      {chapter.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    </div>
   </div>
   {chapter.image && (
-    <figure class="chapter-media biography__media reveal-on-scroll">
-      <img src={chapter.image} alt={chapter.imageAlt} loading="lazy" />
-      <figcaption>Bildmaterial wird durch verifizierte Aufnahmen ersetzt</figcaption>
+    <figure class="biography__media">
+      <img
+        class="biography__image"
+        src={chapter.image}
+        alt={chapter.imageAlt}
+        loading="lazy"
+        width="1400"
+        height="1000"
+        style={`object-position:${chapter.imagePosition || "center"}`}
+      />
     </figure>
   )}
 </article>

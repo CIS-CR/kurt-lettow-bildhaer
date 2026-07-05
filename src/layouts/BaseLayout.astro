@@ -45,6 +45,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <main id="main-content"><slot /></main>
     <Footer />
     <script>
+      import "../scripts/language-switcher";
+    </script>
+    <script>
       const observed = document.querySelectorAll("[data-reveal]");
       if ("IntersectionObserver" in window) {
         document.documentElement.classList.add("reveal-enabled");
