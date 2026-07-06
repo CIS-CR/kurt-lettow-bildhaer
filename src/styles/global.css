@@ -482,8 +482,9 @@ h3 { font-size: 28px; }
 }
 .form-language-media img {
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
+  object-position: 50% 50%;
   filter: saturate(.66) contrast(.96);
 }
 .form-language-note {
@@ -801,7 +802,7 @@ h3 { font-size: 28px; }
   .biography__image { max-height: 640px; aspect-ratio: 5 / 7; }
   .biography__chapter-text p { font-size: 16px; }
   .form-language-copy h2, .exhibition-grid h2 { font-size: 40px; }
-  .form-language-media img { aspect-ratio: 4 / 3; }
+  .form-language-media img { aspect-ratio: 2 / 3; }
   .form-language-note p:first-child, .archive-closing, .exhibition-closing { font-size: 24px !important; }
   .timeline-item { grid-template-columns: 80px 1fr; gap: 18px; }
   .timeline-item time { font-size: 23px; }

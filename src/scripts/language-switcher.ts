@@ -187,6 +187,23 @@ const textTranslations: Record<string, Translation> = {
     en: "Julia van Wilpe begins to record, document and make her father's work visible anew.",
     es: "Julia van Wilpe comienza a registrar, documentar y hacer visible de nuevo la obra de su padre.",
   },
+  "Die Sprache der Form": { en: "The Language of Form", es: "El lenguaje de la forma" },
+  "Vom erzählerischen Detail zur reduzierten Präsenz.": {
+    en: "From narrative detail to reduced presence.",
+    es: "Del detalle narrativo a la presencia reducida.",
+  },
+  "In den 1930er Jahren experimentierte Kurt Lettow mit unterschiedlichen Formen und Motiven — zwischen naturalistischer und expressiver Darstellung.": {
+    en: "In the 1930s, Kurt Lettow experimented with different forms and motifs, between naturalistic and expressive representation.",
+    es: "En la década de 1930, Kurt Lettow experimentó con distintas formas y motivos, entre la representación naturalista y la expresiva.",
+  },
+  "Nach dem Krieg wurden vergrößerte Köpfe und große, ausdrucksstarke Augen typisch für seine Figuren. Die Details blieben sichtbar, doch die Formensprache wurde zunehmend klarer und ruhiger.": {
+    en: "After the war, enlarged heads and large, expressive eyes became typical of his figures. The details remained visible, but the formal language became increasingly clearer and calmer.",
+    es: "Después de la guerra, las cabezas ampliadas y los ojos grandes y expresivos se volvieron característicos de sus figuras. Los detalles seguían visibles, pero el lenguaje formal se hizo cada vez más claro y sereno.",
+  },
+  "In den Arbeiten der 1960er Jahre tragen Haltung, Gesichtsausdruck und Geste die Bedeutung der Figur. Lettows spätere Werke verdichten Inhalt in Form, Kontur und stiller Präsenz.": {
+    en: "In the works of the 1960s, posture, facial expression and gesture carry the meaning of the figure. Lettow's later works condense content into form, contour and quiet presence.",
+    es: "En las obras de la década de 1960, la postura, la expresión del rostro y el gesto sostienen el significado de la figura. Las obras tardías de Lettow condensan el contenido en forma, contorno y presencia silenciosa.",
+  },
   "Werk und Archiv": { en: "Work and Archive", es: "Obra y archivo" },
   "Ein Werk in vielen Materialien.": { en: "A body of work in many materials.", es: "Una obra en muchos materiales." },
   "Lettows Arbeiten umfassen christliche und weltliche Werke, Reliefs, Plastiken, Portale und Wandgestaltungen. Sie zeigen ein feines Spiel von Licht und Schatten, eine reduzierte Formensprache und eine stille Kraft, die Raum für Betrachtung und Interpretation lässt.": {
