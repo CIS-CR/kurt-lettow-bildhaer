@@ -1,23 +1,45 @@
 ---
-import { timelineEvents } from "../data/timeline";
+import { homeTimelineEvents, type TimelineEvent } from "../data/timeline";
+
+interface Props {
+  events?: TimelineEvent[];
+  intro?: string;
+  linkLabel?: string;
+  showLink?: boolean;
+  variant?: "home" | "full";
+}
+
+const {
+  events = homeTimelineEvents,
+  intro = "Eine verdichtete Chronologie von Ausbildung, Werk, Neubeginn und Wiederentdeckung.",
+  linkLabel = "Die Zeitleiste entdecken",
+  showLink = true,
+  variant = "home",
+} = Astro.props;
+const full = variant === "full";
 ---
 
-<section class="timeline-section section-dark scroll-scene" id="timeline" aria-labelledby="timeline-title" data-scroll-scene="timeline">
+<section class:list={["timeline-section", "section-dark", "scroll-scene", { "timeline-section--full": full }]} id="timeline" aria-labelledby="timeline-title" data-scroll-scene="timeline">
   <div class="shell timeline-layout">
     <div class="section-heading sticky-heading" data-reveal>
       <p class="eyebrow light">Zeitleiste</p>
       <h2 id="timeline-title">Stationen eines Lebens und Werkes.</h2>
-      <p>Eine verdichtete Chronologie von Ausbildung, Werk, Neubeginn und Wiederentdeckung.</p>
-      <a class="text-link light-link" href="/timeline">Zeitleiste öffnen <span aria-hidden="true">→</span></a>
+      <p>{intro}</p>
+      {showLink && <a class="text-link light-link" href="/timeline">{linkLabel} <span aria-hidden="true">→</span></a>}
     </div>
     <ol class="timeline-list">
-      {timelineEvents.map((event, index) => (
-        <li class="timeline-item" data-reveal style={`--delay: ${index * 60}ms`}>
+      {events.map((event, index) => (
+        <li class:list={["timeline-item", { "timeline-item--with-media": full && event.image }]} data-reveal style={`--delay: ${index * 60}ms`}>
           <time>{event.year}</time>
           <div>
             <h3>{event.title}</h3>
             <p>{event.description}</p>
           </div>
+          {full && event.image && (
+            <figure class="timeline-media">
+              <img src={event.image} alt={event.imageAlt || ""} loading="lazy" style={`object-position:${event.imagePosition || "center"}`} />
+            </figure>
+          )}
         </li>
       ))}
     </ol>

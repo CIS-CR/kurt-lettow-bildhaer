@@ -1,10 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Timeline from "../components/Timeline.astro";
+import { timelineEvents } from "../data/timeline";
+
+const timelineIntro = "Die Zeitleiste versammelt die wichtigsten Stationen im Leben und Werk Kurt Lettows - von der Ausbildung in Bremen über die großen Aufträge der Nachkriegszeit bis zur Wiederentdeckung seines Lebenswerks.";
 ---
 <BaseLayout title="Zeitleiste | Kurt Lettow" description="Stationen im Leben und Werk des Bremer Bildhauers Kurt Lettow.">
   <section class="internal-hero internal-hero-dark">
-    <div class="shell" data-reveal><p class="eyebrow light">Chronologie</p><h1>Zeitleiste</h1><p>Stationen eines Lebens zwischen Handwerk, Kunst, Neubeginn und öffentlichem Raum.</p></div>
+    <div class="shell" data-reveal><p class="eyebrow light">Chronologie</p><h1>Zeitleiste</h1><p>{timelineIntro}</p></div>
   </section>
-  <Timeline />
+  <Timeline events={timelineEvents} intro={timelineIntro} showLink={false} variant="full" />
 </BaseLayout>

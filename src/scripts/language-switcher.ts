@@ -149,6 +149,11 @@ const textTranslations: Record<string, Translation> = {
     es: "Una cronología condensada de formación, obra, nuevo comienzo y redescubrimiento.",
   },
   "Zeitleiste öffnen": { en: "Open timeline", es: "Abrir cronología" },
+  "Die Zeitleiste entdecken": { en: "Discover the timeline", es: "Descubrir la cronología" },
+  "Die Zeitleiste versammelt die wichtigsten Stationen im Leben und Werk Kurt Lettows - von der Ausbildung in Bremen über die großen Aufträge der Nachkriegszeit bis zur Wiederentdeckung seines Lebenswerks.": {
+    en: "The timeline brings together the most important stages in Kurt Lettow's life and work, from his training in Bremen through the major commissions of the postwar period to the rediscovery of his life work.",
+    es: "La cronología reúne las etapas más importantes de la vida y obra de Kurt Lettow, desde su formación en Bremen y los grandes encargos de la posguerra hasta el redescubrimiento de su obra de vida.",
+  },
   "Geburt in Bremen": { en: "Birth in Bremen", es: "Nacimiento en Bremen" },
   "Kurt Lettow wird in Bremen geboren.": { en: "Kurt Lettow is born in Bremen.", es: "Kurt Lettow nace en Bremen." },
   "Erster großer Auftrag": { en: "First major commission", es: "Primer gran encargo" },
