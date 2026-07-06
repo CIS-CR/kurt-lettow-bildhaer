@@ -30,13 +30,29 @@ const textTranslations: Record<string, Translation> = {
     en: "Kurt Lettow was born in Bremen in 1908 and died in 1992 on his birthday, April 24, at the age of 84.",
     es: "Kurt Lettow nació en Bremen en 1908 y murió en 1992 el día de su cumpleaños, el 24 de abril, a los 84 años.",
   },
+  "Diese Website ist dem Bildhauer Kurt Lettow gewidmet - einem Künstler, dessen Werk weit über Bremen hinausreicht.": {
+    en: "This website is dedicated to the sculptor Kurt Lettow, an artist whose work reaches far beyond Bremen.",
+    es: "Este sitio está dedicado al escultor Kurt Lettow, un artista cuya obra llega mucho más allá de Bremen.",
+  },
+  "Geboren 1908 in Bremen, arbeitete Lettow mit handwerklicher Präzision, künstlerischer Reduktion und einer tiefen Beziehung zum Material.": {
+    en: "Born in Bremen in 1908, Lettow worked with artisanal precision, artistic reduction and a profound relationship with material.",
+    es: "Nacido en Bremen en 1908, Lettow trabajó con precisión artesanal, reducción artística y una profunda relación con el material.",
+  },
   "Sein Werk entstand aus handwerklicher Präzision, künstlerischer Reduktion und einer tiefen Beziehung zum Material.": {
     en: "His work emerged from artisanal precision, artistic reduction and a profound relationship with material.",
     es: "Su obra nació de la precisión artesanal, la reducción artística y una profunda relación con el material.",
   },
+  "Holz, Stein, Ton, Keramik, Glas, Metall und Licht wurden für ihn zu einer stillen, eindringlichen Sprache.": {
+    en: "Wood, stone, clay, ceramics, glass, metal and light became for him a quiet, penetrating language.",
+    es: "La madera, la piedra, el barro, la cerámica, el vidrio, el metal y la luz se convirtieron para él en un lenguaje silencioso e intenso.",
+  },
   "Holz, Stein, Ton, Keramik, Glas, Metall und Licht wurden für ihn zu Formen einer stillen, eindringlichen Sprache.": {
     en: "Wood, stone, clay, ceramics, glass, metal and light became forms of a quiet, penetrating language for him.",
     es: "La madera, la piedra, el barro, la cerámica, el vidrio, el metal y la luz se convirtieron para él en formas de un lenguaje silencioso e intenso.",
+  },
+  "Heute wird sein Lebenswerk neu entdeckt, dokumentiert und sichtbar gemacht.": {
+    en: "Today his life work is being rediscovered, documented and made visible.",
+    es: "Hoy su obra de vida se redescubre, se documenta y se hace visible.",
   },
   "Das Werk der Erinnerung": { en: "The Work of Memory", es: "La obra de la memoria" },
   "Das Werk blieb.": { en: "The work remained.", es: "La obra permaneció." },
