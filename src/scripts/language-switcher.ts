@@ -396,6 +396,10 @@ const attributeTranslations: Record<string, Translation> = {
     en: "Family archive placeholder for documenting Kurt Lettow's work",
     es: "Marcador de archivo familiar para la documentación de la obra de Kurt Lettow",
   },
+  "Archivbild zur Verbindung von Bremen, Costa Rica und der Dokumentation des Werkes von Kurt Lettow": {
+    en: "Archive image connecting Bremen, Costa Rica and the documentation of Kurt Lettow's work",
+    es: "Imagen de archivo que conecta Bremen, Costa Rica y la documentación de la obra de Kurt Lettow",
+  },
   "Platzhalter für eine Atelieraufnahme oder ein Porträt von Kurt Lettow": {
     en: "Placeholder for a studio photograph or portrait of Kurt Lettow",
     es: "Marcador para una fotografía del atelier o un retrato de Kurt Lettow",
