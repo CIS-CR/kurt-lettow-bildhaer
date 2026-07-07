@@ -19,7 +19,7 @@ export const biographyChapters: BiographyChapter[] = [
       "Nach der Schule arbeitete Kurt Lettow zunächst ein Jahr lang in einer Fabrik. Danach absolvierte er eine vollständige Holzbildhauerlehre, erlernte auch den Steinmetzberuf und übernahm später die Leitung einer Steinmetzfirma.",
       "An der Kunstgewerbeschule in Bremen begegnete er Rebecka Meyer-Sprengel, seiner späteren Ehefrau. Bald machte er sich selbständig. Sein erstes Atelier befand sich in der Bührenstraße Nr. 2; später konnte er in das Atelier Nr. 9 in der Böttcherstraße einziehen.",
     ],
-    image: "/images/biography/kurt-lettow-ausbildung-atelier.jpg?v=977acbc",
+    image: "/images/atelier/kurt-lettow-atelier.jpg",
     imageAlt: "Werkstatt und Ausbildung von Kurt Lettow",
     imagePosition: "50% 50%",
   },

@@ -404,6 +404,10 @@ const attributeTranslations: Record<string, Translation> = {
     en: "Placeholder for a studio photograph or portrait of Kurt Lettow",
     es: "Marcador para una fotografía del atelier o un retrato de Kurt Lettow",
   },
+  "Kurt Lettow im Atelier bei der Arbeit": {
+    en: "Kurt Lettow working in the studio",
+    es: "Kurt Lettow trabajando en el atelier",
+  },
   "Platzhalter für Reliefs und Plastiken von Kurt Lettow": {
     en: "Placeholder for reliefs and sculptures by Kurt Lettow",
     es: "Marcador para relieves y esculturas de Kurt Lettow",
