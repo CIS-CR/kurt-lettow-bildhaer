@@ -45,7 +45,7 @@ export const timelineEvents: TimelineEvent[] = [
     year: "1908",
     title: "Geburt in Bremen",
     description: "Kurt Lettow wird in Bremen geboren. Die Stadt, ihre Handwerke und ihr öffentlicher Raum werden später zu wichtigen Bezugspunkten seines Lebens und Arbeitens.",
-    image: "/images/atelier/kurt-lettow-atelier.jpg",
+    image: "/atelier/kurt-lettow-atelier.jpg",
     imageAlt: "Werkstatt und Ausbildung von Kurt Lettow",
     imagePosition: "50% 50%",
   },
