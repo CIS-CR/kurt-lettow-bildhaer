@@ -23,9 +23,9 @@ const darkHeader = !["/", "/timeline"].includes(Astro.url.pathname);
     <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
       {links.map((link) => <a href={link.href}>{link.label}</a>)}
     </nav>
-    <label class="language-switcher" for="language-select">
+    <label class="language-switcher notranslate" for="language-select" translate="no">
       <span>Sprache</span>
-      <select id="language-select" aria-label="Sprache auswählen" data-language-select>
+      <select id="language-select" aria-label="Sprache auswählen" data-language-select translate="no">
         <option value="de">DE</option>
         <option value="en">EN</option>
         <option value="es">ES</option>

@@ -18,11 +18,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
-<html lang="de">
+<html lang="de" class="notranslate" translate="no">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="google" content="notranslate" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#173f35" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
