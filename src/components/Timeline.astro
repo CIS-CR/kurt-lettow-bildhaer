@@ -4,16 +4,12 @@ import { homeTimelineEvents, type TimelineEvent } from "../data/timeline";
 interface Props {
   events?: TimelineEvent[];
   intro?: string;
-  linkLabel?: string;
-  showLink?: boolean;
   variant?: "home" | "full";
 }
 
 const {
   events = homeTimelineEvents,
   intro = "Eine verdichtete Chronologie von Ausbildung, Werk, Neubeginn und Wiederentdeckung.",
-  linkLabel = "Die Zeitleiste entdecken",
-  showLink = true,
   variant = "home",
 } = Astro.props;
 const full = variant === "full";
@@ -25,7 +21,6 @@ const full = variant === "full";
       <p class="eyebrow light">Zeitleiste</p>
       <h2 id="timeline-title">Stationen eines Lebens und Werkes.</h2>
       <p>{intro}</p>
-      {showLink && <a class="text-link light-link" href="/timeline">{linkLabel} <span aria-hidden="true">→</span></a>}
     </div>
     <ol class="timeline-list">
       {events.map((event, index) => (

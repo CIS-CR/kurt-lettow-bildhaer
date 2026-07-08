@@ -1,14 +1,13 @@
 ---
 const links = [
   { href: "/#biografie", label: "Biografie" },
-  { href: "/#timeline", label: "Zeitleiste" },
   { href: "/#atelier", label: "Atelier" },
   { href: "/#archive", label: "Werk" },
   { href: "/#buch", label: "Buch" },
   { href: "/#legacy", label: "Legacy" },
   { href: "/#kontakt", label: "Kontakt" },
 ];
-const darkHeader = !["/", "/timeline"].includes(Astro.url.pathname);
+const darkHeader = Astro.url.pathname !== "/";
 ---
 
 <header class:list={["site-header", { "header-dark": darkHeader }]} data-header>
