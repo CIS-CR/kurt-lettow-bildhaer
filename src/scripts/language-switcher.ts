@@ -4,7 +4,12 @@ type Translation = Record<Exclude<Language, "de">, string>;
 const STORAGE_KEY = "kurt-lettow-language";
 const supportedLanguages = new Set<Language>(["de", "en", "es"]);
 
-const normalize = (value: string) => value.replace(/\s+/g, " ").trim();
+const normalize = (value: string) => value
+  .replace(/[–—]/g, "-")
+  .replace(/[“”„]/g, "\"")
+  .replace(/[‘’]/g, "'")
+  .replace(/\s+/g, " ")
+  .trim();
 
 const textTranslations: Record<string, Translation> = {
   "Zum Inhalt springen": { en: "Skip to content", es: "Saltar al contenido" },
@@ -335,6 +340,243 @@ const textTranslations: Record<string, Translation> = {
     en: "Stations of a life between craft, art, new beginnings and public space.",
     es: "Etapas de una vida entre oficio, arte, nuevo comienzo y espacio público.",
   },
+  "Hommage und Wiederentdeckung": { en: "Homage and Rediscovery", es: "Homenaje y redescubrimiento" },
+  Bremerhaven: { en: "Bremerhaven", es: "Bremerhaven" },
+  "Als Julia van Wilpe im Sommer 2010 in Costa Rica von den Abrissplänen einer Kirche in Bremerhaven erfuhr - und davon, dass ein großes Relief ihres Vaters verschwinden sollte - begann eine Suche.": {
+    en: "When Julia van Wilpe learned in Costa Rica in the summer of 2010 about the planned demolition of a church in Bremerhaven, and that a large relief by her father was to disappear, a search began.",
+    es: "Cuando Julia van Wilpe supo en Costa Rica, en el verano de 2010, de los planes de demolición de una iglesia en Bremerhaven, y de que un gran relieve de su padre podía desaparecer, comenzó una búsqueda.",
+  },
+  "Aus diesem Moment entstand der Wunsch, die erhaltenen Werke Kurt Lettows aufzuspüren, zu fotografieren, zu ordnen und sichtbar zu machen. Eine Reise durch Städte und Dörfer Norddeutschlands begann: zu Kirchen, Schulen, Plätzen, Portalen und majestätischen Wandreliefs.": {
+    en: "From that moment came the wish to trace, photograph, order and make visible the surviving works of Kurt Lettow. A journey through the cities and villages of northern Germany began: to churches, schools, squares, portals and majestic wall reliefs.",
+    es: "De ese momento nació el deseo de localizar, fotografiar, ordenar y hacer visibles las obras conservadas de Kurt Lettow. Comenzó un viaje por ciudades y pueblos del norte de Alemania: hacia iglesias, escuelas, plazas, portales y majestuosos relieves murales.",
+  },
+  "Bald wurde Kurt Lettow weit über Bremen hinaus bekannt. Seine religiösen und weltlichen Werke sind im ganzen norddeutschen Raum zu finden - in Kirchen, Schulen, öffentlichen Gebäuden, auf Plätzen und in privaten Sammlungen.": {
+    en: "Kurt Lettow soon became known far beyond Bremen. His religious and secular works can be found throughout northern Germany, in churches, schools, public buildings, squares and private collections.",
+    es: "Kurt Lettow pronto fue conocido mucho más allá de Bremen. Sus obras religiosas y profanas se encuentran en todo el norte de Alemania, en iglesias, escuelas, edificios públicos, plazas y colecciones privadas.",
+  },
+  "Mit großer Ausdruckskraft und handwerklichem Können arbeitete er unermüdlich in unterschiedlichen Materialien: Ton, Holz, Stein, Keramik, Sgraffito, Emaille, Mosaik, Gips, Glas und Metall. Besonders deutlich wird sein Gespür für Relief, Raum und Architektur: seine Werke entfalten ihre Wirkung nicht isoliert, sondern im Dialog mit dem Ort.": {
+    en: "With great expressive force and craftsmanship, he worked tirelessly in many materials: clay, wood, stone, ceramics, sgraffito, enamel, mosaic, plaster, glass and metal. His feeling for relief, space and architecture is especially clear: his works do not unfold in isolation, but in dialogue with their place.",
+    es: "Con gran fuerza expresiva y dominio artesanal, trabajó incansablemente en diversos materiales: barro, madera, piedra, cerámica, esgrafiado, esmalte, mosaico, yeso, vidrio y metal. Su sensibilidad para el relieve, el espacio y la arquitectura resulta especialmente clara: sus obras no actúan aisladas, sino en diálogo con el lugar.",
+  },
+  "Von Bremen nach Costa Rica, von der Erinnerung zur Dokumentation.": {
+    en: "From Bremen to Costa Rica, from memory to documentation.",
+    es: "De Bremen a Costa Rica, de la memoria a la documentación.",
+  },
+  "Across generations": { en: "Across generations", es: "A través de generaciones" },
+  "Als Julia van Wilpe später nach Costa Rica zog, blieben die Reisen nach Mittelamerika Teil der Familiengeschichte. Doch die Spur des Werkes führte sie immer wieder zurück nach Norddeutschland - zu Kirchen, Schulen, Plätzen und Wandreliefs ihres Vaters.": {
+    en: "When Julia van Wilpe later moved to Costa Rica, journeys to Central America remained part of the family history. Yet the trail of the work led her again and again back to northern Germany, to her father's churches, schools, squares and wall reliefs.",
+    es: "Cuando Julia van Wilpe se mudó más tarde a Costa Rica, los viajes a Centroamérica siguieron formando parte de la historia familiar. Pero la huella de la obra la llevó una y otra vez de regreso al norte de Alemania, a las iglesias, escuelas, plazas y relieves murales de su padre.",
+  },
+  "Aus der Distanz entstand ein neuer Blick: auf das Atelier, die Modelle, die Fotografien und die Orte, an denen das Werk weiterlebt.": {
+    en: "Distance opened a new perspective: on the studio, the models, the photographs and the places where the work continues to live.",
+    es: "Desde la distancia surgió una nueva mirada: sobre el atelier, los modelos, las fotografías y los lugares donde la obra sigue viva.",
+  },
+  "Hier roch es nach Holz, feuchtem Ton, Gips und Tabakrauch. Es gab Drehböcke, Staffeleien, Arbeitsbänke, Tonkisten, eine Arbeitswand aus Holz, Werkzeuge aller Art - und eine Vielzahl von Modellen, Entwürfen und Skizzen.": {
+    en: "Here it smelled of wood, damp clay, plaster and tobacco smoke. There were turntables, easels, workbenches, clay boxes, a wooden working wall, tools of every kind, and a multitude of models, drafts and sketches.",
+    es: "Aquí olía a madera, barro húmedo, yeso y humo de tabaco. Había caballetes giratorios, atriles, bancos de trabajo, cajas de barro, una pared de trabajo de madera, herramientas de todo tipo y una gran cantidad de modelos, proyectos y bocetos.",
+  },
+  "Ich wusste, dass er ein bekannter und gefragter Künstler war. Doch das Ausmaß, die Vielfalt und die Größe seines Werkes wurden mir erst später bewusst.": {
+    en: "I knew he was a well-known and sought-after artist. But the scale, diversity and magnitude of his work only became clear to me later.",
+    es: "Sabía que era un artista conocido y solicitado. Pero la dimensión, la diversidad y la grandeza de su obra solo se hicieron evidentes para mí más tarde.",
+  },
+  Plastiken: { en: "Sculptures", es: "Esculturas" },
+  Gipsmodelle: { en: "Plaster models", es: "Modelos de yeso" },
+  Dokumente: { en: "Documents", es: "Documentos" },
+  Sgraffito: { en: "Sgraffito", es: "Esgrafiado" },
+  Emaille: { en: "Enamel", es: "Esmalte" },
+  Mosaik: { en: "Mosaic", es: "Mosaico" },
+  Glas: { en: "Glass", es: "Vidrio" },
+  Metall: { en: "Metal", es: "Metal" },
+  "Der Wirkungskreis des Künstlers reicht weit über die Grenzen Bremens hinaus. Seine großen religiösen und weltlichen Werke finden sich im gesamten norddeutschen Raum.": {
+    en: "The artist's sphere of influence reaches far beyond the borders of Bremen. His major religious and secular works are found throughout northern Germany.",
+    es: "El ámbito de influencia del artista llega mucho más allá de los límites de Bremen. Sus grandes obras religiosas y profanas se encuentran en todo el norte de Alemania.",
+  },
+  "Man entdeckt darin den persönlichen Stil eines Bildhauers mit großer Begabung für Reliefs und einem außergewöhnlichen Verständnis für die Fernwirkung von Plastik im architektonischen Zusammenhang.": {
+    en: "In them one discovers the personal style of a sculptor with a great gift for reliefs and an exceptional understanding of the distant effect of sculpture within architectural settings.",
+    es: "En ellas se descubre el estilo personal de un escultor con gran talento para los relieves y una comprensión excepcional del efecto a distancia de la escultura en el contexto arquitectónico.",
+  },
+  "Mit großer Ausdruckskraft und handwerklichem Können arbeitete Lettow bis ins hohe Alter in verschiedenen Materialien: Ton, Holz, Stein, Keramik, Sgraffito, Emaille, Mosaik, Gips, Glas und Metall.": {
+    en: "With great expressive force and craftsmanship, Lettow worked into old age in various materials: clay, wood, stone, ceramics, sgraffito, enamel, mosaic, plaster, glass and metal.",
+    es: "Con gran fuerza expresiva y dominio artesanal, Lettow trabajó hasta edad avanzada en distintos materiales: barro, madera, piedra, cerámica, esgrafiado, esmalte, mosaico, yeso, vidrio y metal.",
+  },
+  "Die erhaltenen Gipsmodelle geben einen ungewöhnlichen Einblick in die Entstehung dieses Werkes. Der Nachlass Kurt Lettows enthält nahezu alle Arbeiten in Modellform.": {
+    en: "The surviving plaster models offer an unusual insight into the creation of this body of work. Kurt Lettow's estate contains nearly all works in model form.",
+    es: "Los modelos de yeso conservados ofrecen una mirada poco común al origen de esta obra. El legado de Kurt Lettow contiene casi todos los trabajos en forma de modelo.",
+  },
+  "Diese Modelle zeigen unterschiedliche Phasen: erste Entwürfe zu Komposition, Proportion und räumlichem Zusammenhang, aber auch Modelle, die mithilfe einer Punktiermaschine in Holz oder Stein übertragen wurden.": {
+    en: "These models show different phases: first drafts for composition, proportion and spatial context, but also models that were transferred into wood or stone with the help of a pointing machine.",
+    es: "Estos modelos muestran distintas fases: primeros estudios de composición, proporción y relación espacial, pero también modelos trasladados a madera o piedra mediante una máquina de puntos.",
+  },
+  "Fotografien, Skizzen und zahlreiche Dokumente machen den Weg vom Auftrag bis zur Ausführung nachvollziehbar und vermitteln einen Eindruck von den Bedingungen, unter denen Lettow arbeitete.": {
+    en: "Photographs, sketches and numerous documents make the path from commission to execution traceable and convey an impression of the conditions under which Lettow worked.",
+    es: "Fotografías, bocetos y numerosos documentos permiten seguir el camino desde el encargo hasta la ejecución y transmiten una impresión de las condiciones en las que trabajaba Lettow.",
+  },
+  "Seine Werke ziehen die Menschen durch ihren klaren, verinnerlichten Stil in ihren Bann.": {
+    en: "His works captivate people through their clear, inwardly concentrated style.",
+    es: "Sus obras atraen por su estilo claro e interiorizado.",
+  },
+  "Werke zwischen Licht, Schatten, Raum und architektonischem Zusammenhang.": {
+    en: "Works between light, shadow, space and architectural context.",
+    es: "Obras entre luz, sombra, espacio y contexto arquitectónico.",
+  },
+  "Religiöse Arbeiten für Kirchenräume in Bremen und im norddeutschen Raum.": {
+    en: "Religious works for church spaces in Bremen and northern Germany.",
+    es: "Trabajos religiosos para espacios eclesiásticos en Bremen y el norte de Alemania.",
+  },
+  "Kunst im öffentlichen Raum, an Fassaden, Portalen und Wandflächen.": {
+    en: "Art in public space, on facades, portals and wall surfaces.",
+    es: "Arte en el espacio público, en fachadas, portales y superficies murales.",
+  },
+  "Reduzierte Formen, rhythmische Flächen und eine stille, klare Präsenz.": {
+    en: "Reduced forms, rhythmic surfaces and a quiet, clear presence.",
+    es: "Formas reducidas, superficies rítmicas y una presencia silenciosa y clara.",
+  },
+  "Modelle und Entwürfe": { en: "Models and Drafts", es: "Modelos y proyectos" },
+  "Gipsmodelle, Skizzen und Arbeitsmodelle aus dem Nachlass.": {
+    en: "Plaster models, sketches and working models from the estate.",
+    es: "Modelos de yeso, bocetos y modelos de trabajo procedentes del legado.",
+  },
+  "Fotografien und Archiv": { en: "Photographs and Archive", es: "Fotografías y archivo" },
+  "Dokumente, Fotografien und Spuren vom Auftrag bis zur Ausführung.": {
+    en: "Documents, photographs and traces from commission to execution.",
+    es: "Documentos, fotografías y huellas desde el encargo hasta la ejecución.",
+  },
+  "Dokumente · Werkstoffe": { en: "Documents · Materials", es: "Documentos · Materiales" },
+  "Gipsmodelle · Entwurfsprozess": { en: "Plaster models · Design process", es: "Modelos de yeso · Proceso de diseño" },
+  "Kirchenräume · Bremen und Norddeutschland": { en: "Church spaces · Bremen and northern Germany", es: "Espacios religiosos · Bremen y norte de Alemania" },
+  "Portale · Öffentlicher Raum": { en: "Portals · Public space", es: "Portales · Espacio público" },
+  "Reliefs · Werkgruppe": { en: "Reliefs · Work group", es: "Relieves · Grupo de obra" },
+  "Wandreliefs · Architekturbezogene Kunst": { en: "Wall reliefs · Architecture-related art", es: "Relieves murales · Arte vinculado a la arquitectura" },
+  "Aus der Suche nach den erhaltenen Werken entstand das Buch „Kurt Lettow, Bildhauer, 1908-1992. Über die Grenzen Bremens hinaus“.": {
+    en: "The search for the surviving works gave rise to the book \"Kurt Lettow, Sculptor, 1908-1992. Beyond the borders of Bremen\".",
+    es: "De la búsqueda de las obras conservadas nació el libro «Kurt Lettow, escultor, 1908-1992. Más allá de los límites de Bremen».",
+  },
+  "Es umfasst 240 Seiten und 400 farbige Abbildungen und erschien begleitend zur Ausstellung „Nachkriegskirchenkunst Ästhetik: Lettow“ in der Kulturkirche St. Stephani in Bremen, die vom 7. Juni bis zum 26. August 2012 gezeigt wurde.": {
+    en: "It comprises 240 pages and 400 color illustrations and was published to accompany the exhibition \"Postwar Church Art Aesthetics: Lettow\" at Kulturkirche St. Stephani in Bremen, shown from June 7 to August 26, 2012.",
+    es: "Comprende 240 páginas y 400 ilustraciones en color, y apareció como publicación vinculada a la exposición «Arte sacro de posguerra. Estética: Lettow» en la Kulturkirche St. Stephani de Bremen, presentada del 7 de junio al 26 de agosto de 2012.",
+  },
+  "Das Buch dokumentiert das große christliche wie weltliche Werk Lettows im norddeutschen Raum und macht die Vielfalt seiner Materialien, Orte und Formen sichtbar.": {
+    en: "The book documents Lettow's major Christian and secular work in northern Germany and makes visible the diversity of his materials, places and forms.",
+    es: "El libro documenta la gran obra cristiana y profana de Lettow en el norte de Alemania y hace visible la diversidad de sus materiales, lugares y formas.",
+  },
+  "400 farbige Abbildungen": { en: "400 color illustrations", es: "400 ilustraciones en color" },
+  "Rasch-Verlag, 2012": { en: "Rasch Verlag, 2012", es: "Rasch-Verlag, 2012" },
+  "Mit Beiträgen von Dr. Frank Laukötter, Dr. Arie Hartog, Prof. Dr. Georg Skalecki, Pastor Achim Kunze, Rebekka Schwiddessen und weiteren Fachleuten.": {
+    en: "With contributions by Dr. Frank Laukötter, Dr. Arie Hartog, Prof. Dr. Georg Skalecki, Pastor Achim Kunze, Rebekka Schwiddessen and other specialists.",
+    es: "Con contribuciones de Dr. Frank Laukötter, Dr. Arie Hartog, Prof. Dr. Georg Skalecki, Pastor Achim Kunze, Rebekka Schwiddessen y otros especialistas.",
+  },
+  "Die Ausstellung": { en: "The Exhibition", es: "La exposición" },
+  "Nachkriegskirchenkunst Ästhetik: Lettow": {
+    en: "Postwar Church Art Aesthetics: Lettow",
+    es: "Arte sacro de posguerra. Estética: Lettow",
+  },
+  "Vom 7. Juni bis zum 26. August 2012 wurde die Ausstellung „Nachkriegskirchenkunst Ästhetik: Lettow“ in der Kulturkirche St. Stephani in Bremen gezeigt.": {
+    en: "From June 7 to August 26, 2012, the exhibition \"Postwar Church Art Aesthetics: Lettow\" was shown at Kulturkirche St. Stephani in Bremen.",
+    es: "Del 7 de junio al 26 de agosto de 2012 se presentó la exposición «Arte sacro de posguerra. Estética: Lettow» en la Kulturkirche St. Stephani de Bremen.",
+  },
+  "Sie war dem Werk des Bremer Bildhauers Kurt Lettow gewidmet und wurde vom Team des Gerhard-Marcks-Hauses unterstützt, von Direktor Dr. Arie Hartog konzipiert und von der Kunsthistorikerin Rebekka Schwiddessen kuratiert.": {
+    en: "It was dedicated to the work of Bremen sculptor Kurt Lettow and was supported by the team of the Gerhard Marcks House, conceived by director Dr. Arie Hartog and curated by art historian Rebekka Schwiddessen.",
+    es: "Estuvo dedicada a la obra del escultor de Bremen Kurt Lettow y contó con el apoyo del equipo del Gerhard-Marcks-Haus; fue concebida por su director, Dr. Arie Hartog, y curada por la historiadora del arte Rebekka Schwiddessen.",
+  },
+  "Möglich wurde sie durch Pastor Achim Kunze, Projektleiter der Kulturkirche St. Stephani, und sein Team.": {
+    en: "It was made possible by Pastor Achim Kunze, project director of Kulturkirche St. Stephani, and his team.",
+    es: "Fue posible gracias al pastor Achim Kunze, director del proyecto de la Kulturkirche St. Stephani, y a su equipo.",
+  },
+  "Sieben Originalwerke gaben einen Überblick über verschiedene Werkphasen von 1931 bis 1964. Ergänzt wurden sie durch zahlreiche Gipsmodelle und Arbeitsmodelle, die die Entwicklung des Bildhauers über fünf Jahrzehnte sichtbar machten.": {
+    en: "Seven original works offered an overview of different creative phases from 1931 to 1964. They were complemented by numerous plaster and working models that made five decades of the sculptor's development visible.",
+    es: "Siete obras originales ofrecieron una visión de distintas fases creativas entre 1931 y 1964. Se complementaron con numerosos modelos de yeso y modelos de trabajo que hicieron visible el desarrollo del escultor a lo largo de cinco décadas.",
+  },
+  "Lettow steht für eine Generation von Künstlern, die in den vergangenen Jahrzehnten vielfach in Vergessenheit geraten ist.": {
+    en: "Lettow represents a generation of artists that has often fallen into oblivion in recent decades.",
+    es: "Lettow representa a una generación de artistas que en las últimas décadas ha caído muchas veces en el olvido.",
+  },
+  "Ich wusste, dass mein Vater ein bekannter und gefragter Künstler war und dass seine Arbeiten bewundert wurden.": {
+    en: "I knew that my father was a well-known and sought-after artist and that his works were admired.",
+    es: "Sabía que mi padre era un artista conocido y solicitado, y que sus trabajos eran admirados.",
+  },
+  "Doch das Ausmaß, die Vielfalt und die Größe seines Werkes wurden mir erst bewusst, als er nicht mehr an unserer Seite war.": {
+    en: "But the scale, diversity and magnitude of his work only became clear to me when he was no longer at our side.",
+    es: "Pero la dimensión, la diversidad y la grandeza de su obra solo se hicieron evidentes para mí cuando él ya no estaba a nuestro lado.",
+  },
+  "Heute betrete ich sein Atelier mit Andacht - und diese Andacht verwandelt sich bald in eine unstillbare Neugier.": {
+    en: "Today I enter his studio with reverence, and that reverence soon turns into an insatiable curiosity.",
+    es: "Hoy entro en su atelier con recogimiento, y ese recogimiento pronto se transforma en una curiosidad insaciable.",
+  },
+  "Ich versuche, sein Werk zu erfassen, zu dokumentieren und sichtbar zu machen. Dabei wächst in mir eine tiefe Bewunderung für meinen Vater, den Künstler.": {
+    en: "I try to record, document and make his work visible. In doing so, a deep admiration grows in me for my father, the artist.",
+    es: "Intento registrar, documentar y hacer visible su obra. En ese proceso crece en mí una profunda admiración por mi padre, el artista.",
+  },
+  "Der Beginn der Suche": { en: "The Beginning of the Search", es: "El inicio de la búsqueda" },
+  "Ausstellung und Buch": { en: "Exhibition and Book", es: "Exposición y libro" },
+  "Kurt Lettow wird in Bremen geboren. Die Stadt, ihre Handwerke und ihr öffentlicher Raum werden später zu wichtigen Bezugspunkten seines Lebens und Arbeitens.": {
+    en: "Kurt Lettow is born in Bremen. The city, its crafts and its public space later become important points of reference for his life and work.",
+    es: "Kurt Lettow nace en Bremen. La ciudad, sus oficios y su espacio público se convierten más tarde en puntos de referencia importantes para su vida y su trabajo.",
+  },
+  "Mit 22 Jahren erhält Lettow seinen ersten großen Auftrag: einen Orgelprospekt aus Lindenholz für die St. Ulrichkirche in Halle, mit sechs Figuren und ornamentaler Gestaltung.": {
+    en: "At the age of 22, Lettow receives his first major commission: a limewood organ case for St. Ulrich's Church in Halle, with six figures and ornamental design.",
+    es: "A los 22 años, Lettow recibe su primer gran encargo: una caja de órgano en madera de tilo para la iglesia de San Ulrico en Halle, con seis figuras y diseño ornamental.",
+  },
+  "Es folgen ein überlebensgroßes Kruzifix für den neuen katholischen Friedhof in Delmenhorst, eine lebensgroße heilige Elisabeth für das Arbeitsamt in Vechta sowie weitere Aufträge und Restaurierungen.": {
+    en: "An oversized crucifix for the new Catholic cemetery in Delmenhorst follows, along with a life-size Saint Elizabeth for the employment office in Vechta and further commissions and restorations.",
+    es: "Le siguen un crucifijo de tamaño superior al natural para el nuevo cementerio católico de Delmenhorst, una Santa Isabel de tamaño natural para la oficina de empleo de Vechta y otros encargos y restauraciones.",
+  },
+  "Nach Krieg und englischer Gefangenschaft kehrt Lettow Ende 1945 krank zurück. Existenz, Atelier und Arbeitsgrundlagen müssen neu aufgebaut werden.": {
+    en: "After the war and British captivity, Lettow returns ill at the end of 1945. His livelihood, studio and working foundations have to be rebuilt.",
+    es: "Tras la guerra y el cautiverio inglés, Lettow regresa enfermo a finales de 1945. Su vida profesional, el atelier y las bases de trabajo deben reconstruirse.",
+  },
+  "Neue Aufträge entstehen für katholische Kirchen in Delmenhorst, Düsternort, Cloppenburg, Vechta und Oldenburg sowie für Schulen, evangelische Kirchen und öffentliche Räume in Bremen.": {
+    en: "New commissions arise for Catholic churches in Delmenhorst, Düsternort, Cloppenburg, Vechta and Oldenburg, as well as for schools, Protestant churches and public spaces in Bremen.",
+    es: "Surgen nuevos encargos para iglesias católicas en Delmenhorst, Düsternort, Cloppenburg, Vechta y Oldenburg, así como para escuelas, iglesias evangélicas y espacios públicos en Bremen.",
+  },
+  "Seine Tochter Julia verlässt das Elternhaus, um Architektur zu studieren. Später führen Familienreisen nach Costa Rica und Mittelamerika, während das Werk in Norddeutschland weiter seine Spuren hinterlässt.": {
+    en: "His daughter Julia leaves the family home to study architecture. Later, family journeys lead to Costa Rica and Central America, while the work continues to leave its traces in northern Germany.",
+    es: "Su hija Julia deja la casa familiar para estudiar arquitectura. Más tarde, los viajes familiares conducen a Costa Rica y Centroamérica, mientras la obra sigue dejando huellas en el norte de Alemania.",
+  },
+  "Kurt Lettow stirbt am 24. April, seinem Geburtstag, im Alter von 84 Jahren. Sein Atelier, die Modelle und viele Dokumente bleiben als konzentrierter Nachlass erhalten.": {
+    en: "Kurt Lettow dies on April 24, his birthday, at the age of 84. His studio, the models and many documents remain as a concentrated estate.",
+    es: "Kurt Lettow muere el 24 de abril, día de su cumpleaños, a los 84 años. Su atelier, los modelos y muchos documentos permanecen como un legado concentrado.",
+  },
+  "Julia van Wilpe erfährt in Costa Rica von den Abrissplänen einer Kirche in Bremerhaven und dem gefährdeten Relief ihres Vaters. Die systematische Suche nach den erhaltenen Werken beginnt.": {
+    en: "In Costa Rica, Julia van Wilpe learns of the planned demolition of a church in Bremerhaven and of her father's endangered relief. The systematic search for the surviving works begins.",
+    es: "En Costa Rica, Julia van Wilpe se entera de los planes de demolición de una iglesia en Bremerhaven y del relieve amenazado de su padre. Comienza la búsqueda sistemática de las obras conservadas.",
+  },
+  "Julia van Wilpe erfährt in Costa Rica von den Abrissplänen einer Kirche in Bremerhaven und dem gefährdeten Relief ihres Vaters. Daraus entsteht die systematische Suche nach den erhaltenen Werken.": {
+    en: "In Costa Rica, Julia van Wilpe learns of the planned demolition of a church in Bremerhaven and of her father's endangered relief. From this emerges the systematic search for the surviving works.",
+    es: "En Costa Rica, Julia van Wilpe se entera de los planes de demolición de una iglesia en Bremerhaven y del relieve amenazado de su padre. De ahí nace la búsqueda sistemática de las obras conservadas.",
+  },
+  "Die Ausstellung \"Nachkriegskirchenkunst Ästhetik: Lettow\" wird in der Kulturkirche St. Stephani in Bremen gezeigt. Begleitend erscheint das Buch über sein Lebenswerk.": {
+    en: "The exhibition \"Postwar Church Art Aesthetics: Lettow\" is shown at Kulturkirche St. Stephani in Bremen. The book on his life work appears alongside it.",
+    es: "La exposición «Arte sacro de posguerra. Estética: Lettow» se presenta en la Kulturkirche St. Stephani de Bremen. De forma paralela aparece el libro sobre su obra de vida.",
+  },
+  "Die Ausstellung \"Nachkriegskirchenkunst Ästhetik: Lettow\" wird in der Kulturkirche St. Stephani in Bremen gezeigt. Begleitend erscheint das Buch über sein Lebenswerk und seinen Wirkungskreis im norddeutschen Raum.": {
+    en: "The exhibition \"Postwar Church Art Aesthetics: Lettow\" is shown at Kulturkirche St. Stephani in Bremen. The book on his life work and sphere of influence in northern Germany appears alongside it.",
+    es: "La exposición «Arte sacro de posguerra. Estética: Lettow» se presenta en la Kulturkirche St. Stephani de Bremen. De forma paralela aparece el libro sobre su obra de vida y su ámbito de influencia en el norte de Alemania.",
+  },
+  "Das Buch zeigt das christliche wie weltliche Werk Lettows, das im gesamten norddeutschen Raum zu finden ist.": {
+    en: "The book presents Lettow's Christian and secular work, found throughout northern Germany.",
+    es: "El libro presenta la obra cristiana y profana de Lettow, presente en todo el norte de Alemania.",
+  },
+  "Kurt Lettow, Bildhauer, 1908-1992": {
+    en: "Kurt Lettow, Sculptor, 1908-1992",
+    es: "Kurt Lettow, escultor, 1908-1992",
+  },
+  "Kurt Lettow, Bildhauer, 1908-1992. Über die Grenzen Bremens hinaus.": {
+    en: "Kurt Lettow, Sculptor, 1908-1992. Beyond the borders of Bremen.",
+    es: "Kurt Lettow, escultor, 1908-1992. Más allá de los límites de Bremen.",
+  },
+  "Julia van Wilpe, geb. Lettow": { en: "Julia van Wilpe, née Lettow", es: "Julia van Wilpe, nacida Lettow" },
+  "Prof. Julia van Wilpe, geb. Lettow": {
+    en: "Prof. Julia van Wilpe, née Lettow",
+    es: "Prof. Julia van Wilpe, nacida Lettow",
+  },
+  Skizzen: { en: "Sketches", es: "Bocetos" },
+  "Am Querkamp 59": { en: "Am Querkamp 59", es: "Am Querkamp 59" },
+  "Apartado 373": { en: "P.O. Box 373", es: "Apartado 373" },
+  "Universidad Autónoma de Centroamérica, UACA": {
+    en: "Autonomous University of Central America, UACA",
+    es: "Universidad Autónoma de Centroamérica, UACA",
+  },
+  "© 2026 Kurt Lettow.": { en: "© 2026 Kurt Lettow.", es: "© 2026 Kurt Lettow." },
 };
 
 const attributeTranslations: Record<string, Translation> = {
@@ -474,10 +716,15 @@ const getLanguage = (value: string | null): Language => (
   supportedLanguages.has(value as Language) ? value as Language : "de"
 );
 
+const lookupTranslation = (key: string, source: Record<string, Translation>) => {
+  if (source[key]) return source[key];
+  return Object.entries(source).find(([sourceKey]) => normalize(sourceKey) === key)?.[1];
+};
+
 const translateValue = (value: string, language: Language, source: Record<string, Translation>) => {
   const key = normalize(value);
   if (language === "de") return value;
-  return source[key]?.[language] ?? value;
+  return lookupTranslation(key, source)?.[language] ?? value;
 };
 
 const shouldSkipTextNode = (node: Text) => {
