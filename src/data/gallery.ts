@@ -14,9 +14,9 @@ export const galleryItems: GalleryItem[] = [
     title: "Reliefs und Plastiken",
     date: "Werkgruppe",
     description: "Werke zwischen Licht, Schatten, Raum und architektonischem Zusammenhang.",
-    image: "/images/portrait-placeholder.webp",
-    alt: "Platzhalter für Reliefs und Plastiken von Kurt Lettow",
-    position: "50% 22%",
+    image: "/images/work/kurt-lettow-memory-shadows.jpg",
+    alt: "Relief von Kurt Lettow mit Licht- und Schattenspiel",
+    position: "50% 50%",
   },
   {
     category: "Kirchenräume",
