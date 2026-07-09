@@ -23,8 +23,9 @@ export const galleryItems: GalleryItem[] = [
     title: "Sakrale Orte",
     date: "Bremen und Norddeutschland",
     description: "Religiöse Arbeiten für Kirchenräume in Bremen und im norddeutschen Raum.",
-    image: "/images/archive-documents-placeholder.webp",
-    alt: "Platzhalter für Arbeiten in Kirchenräumen",
+    image: "/images/work/religious-artwork-ecclesiastical-spaces.jpg",
+    alt: "Religiöse Arbeit von Kurt Lettow in einem Kirchenraum",
+    position: "50% 50%",
   },
   {
     category: "Portale",
