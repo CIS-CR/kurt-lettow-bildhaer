@@ -204,14 +204,15 @@ h3 { font-size: 28px; }
 @keyframes scroll-cue { 0%,100% { transform: translate(-50%,0); opacity: .45; } 50% { transform: translate(-50%,14px); opacity: 1; } }
 
 .introduction { padding: 130px 0; background: var(--paper); }
-.intro-grid { display: grid; grid-template-columns: .8fr 1.55fr minmax(260px, 380px); gap: 64px; align-items: start; }
+.intro-grid { display: grid; grid-template-columns: minmax(320px, 460px) minmax(0, 1fr); gap: clamp(56px, 8vw, 120px); align-items: center; }
+.intro-content { max-width: 800px; }
 .intro-grid h2 { max-width: 750px; margin-bottom: 30px; font-size: 56px; line-height: 1.04; }
 .intro-grid .lead { max-width: 760px; }
 .intro-media {
   width: 100%;
-  max-width: 380px;
-  aspect-ratio: 1 / 1;
-  margin: 4px 0 0;
+  max-width: 460px;
+  aspect-ratio: 5 / 7;
+  margin: 0;
   overflow: hidden;
   background: #e4ded2;
 }
@@ -220,7 +221,7 @@ h3 { font-size: 28px; }
   height: 100%;
   display: block;
   object-fit: cover;
-  object-position: center 38%;
+  object-position: center center;
   filter: saturate(.92) contrast(.98);
 }
 .placeholder-copy { max-width: 670px; margin-top: 28px; color: var(--muted); }
@@ -755,7 +756,8 @@ h3 { font-size: 28px; }
   .hero-subtitle { font-size: 28px; }
   .hero-dates { font-size: 26px; }
   .intro-grid, .section-heading, .story-heading, .biography__header, .form-language-grid, .timeline-layout, .references-grid, .atelier__layout, .book-grid, .exhibition-grid, .contact-grid { grid-template-columns: 1fr; gap: 35px; }
-  .intro-media { max-width: 520px; margin-top: 10px; }
+  .intro-media { max-width: 520px; }
+  .intro-content { max-width: none; }
   .intro-grid h2, .section-heading h2 { font-size: 48px; }
   .biography__title { font-size: 48px; }
   .form-language-copy h2, .exhibition-grid h2 { font-size: 48px; }
