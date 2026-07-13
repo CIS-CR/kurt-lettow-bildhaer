@@ -282,6 +282,10 @@ h3 { font-size: 28px; }
 .memory-section__inner {
   position: relative;
   z-index: 4;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
+  gap: clamp(54px, 8vw, 112px);
+  align-items: center;
   padding: 140px 0;
 }
 .memory-section__content {
@@ -331,9 +335,12 @@ h3 { font-size: 28px; }
   text-transform: uppercase;
   backdrop-filter: blur(10px);
 }
-.memory-section__floating {
-  position: absolute;
-  z-index: 3;
+.memory-section__portrait {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 5 / 7;
   margin: 0;
   overflow: hidden;
   border: 1px solid rgba(255,255,255,.16);
@@ -342,23 +349,13 @@ h3 { font-size: 28px; }
   box-shadow: 0 30px 80px rgba(0,0,0,.38);
   will-change: transform;
 }
-.memory-section__floating img {
+.memory-section__portrait img {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
+  object-position: center center;
   filter: saturate(.76) contrast(.96);
-}
-.memory-section__floating--detail {
-  top: 17%;
-  right: max(42px, calc((100vw - var(--shell)) / 2));
-  width: min(31vw, 390px);
-  aspect-ratio: 7 / 5;
-}
-.memory-section__floating--document {
-  right: max(82px, calc((100vw - var(--shell)) / 2 + 48px));
-  bottom: 14%;
-  width: min(28vw, 330px);
-  aspect-ratio: 4 / 3;
 }
 .memory-section--animated [data-memory-reveal],
 .memory-section--animated [data-memory-chip] {
@@ -779,11 +776,10 @@ h3 { font-size: 28px; }
   .timeline-media { grid-column: 2; max-width: 260px; }
   .archive-item, .archive-item.featured { grid-column: span 6; }
   .memory-section { min-height: 980px; }
-  .memory-section__inner { padding: 110px 0; }
+  .memory-section__inner { grid-template-columns: 1fr; gap: 46px; padding: 110px 0; }
+  .memory-section__portrait { max-width: 420px; }
   .memory-section__title { font-size: 58px; }
   .memory-section__subtitle { font-size: 28px; }
-  .memory-section__floating--detail { width: min(34vw, 300px); top: 12%; }
-  .memory-section__floating--document { width: min(32vw, 270px); right: 34px; bottom: 9%; }
   .atelier { padding: 100px 0; }
   .atelier__media, .atelier__media img { min-height: 520px; }
   .atelier__details h2, .book-grid h2, .contact-grid h2 { font-size: 46px; }
@@ -835,14 +831,12 @@ h3 { font-size: 28px; }
       linear-gradient(180deg, rgba(10,13,12,.04) 0%, rgba(10,13,12,.18) 44%, rgba(10,13,12,.92) 100%),
       rgba(10,13,12,.22);
   }
-  .memory-section__inner { padding: 42px 0 86px; }
+  .memory-section__inner { gap: 34px; padding: 42px 0 86px; }
   .memory-section__content { max-width: none; }
   .memory-section__title { max-width: 10ch; font-size: 43px; }
   .memory-section__subtitle { margin-bottom: 26px; font-size: 25px; }
   .memory-section__text, .memory-section__support { font-size: 16px; }
-  .memory-section__floating { position: relative; right: auto; bottom: auto; box-shadow: 0 18px 48px rgba(0,0,0,.32); }
-  .memory-section__floating--detail { display: none; }
-  .memory-section__floating--document { width: min(72vw, 280px); margin: -70px 14px 0 auto; aspect-ratio: 4 / 3; }
+  .memory-section__portrait { max-width: min(78vw, 330px); box-shadow: 0 18px 48px rgba(0,0,0,.32); }
   .memory-section__chip { min-height: 30px; padding: 7px 10px; font-size: 10px; }
   .biography__header { margin-bottom: 66px; }
   .biography__title { font-size: 40px; }
