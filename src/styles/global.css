@@ -275,9 +275,9 @@ h3 { font-size: 28px; }
 .memory-section__shade {
   z-index: 2;
   background:
-    radial-gradient(circle at 73% 43%, rgba(230,214,170,.1), rgba(230,214,170,0) 24%),
-    linear-gradient(90deg, rgba(10,13,12,.9) 0%, rgba(10,13,12,.76) 36%, rgba(10,13,12,.28) 70%, rgba(10,13,12,.66) 100%),
-    rgba(10,13,12,.2);
+    radial-gradient(circle at 73% 43%, rgba(230,214,170,.08), rgba(230,214,170,0) 24%),
+    linear-gradient(90deg, rgba(10,13,12,.72) 0%, rgba(10,13,12,.61) 36%, rgba(10,13,12,.22) 70%, rgba(10,13,12,.53) 100%),
+    rgba(10,13,12,.16);
 }
 .memory-section__inner {
   position: relative;
