@@ -656,6 +656,10 @@ const attributeTranslations: Record<string, Translation> = {
     en: "Placeholder for portals and wall designs",
     es: "Marcador para portales y diseños murales",
   },
+  "Portale und Wandgestaltung von Kurt Lettow im öffentlichen Raum": {
+    en: "Portals and wall design by Kurt Lettow in public space",
+    es: "Portales y diseño mural de Kurt Lettow en el espacio público",
+  },
   "Platzhalter für Wandreliefs von Kurt Lettow": {
     en: "Placeholder for wall reliefs by Kurt Lettow",
     es: "Marcador para relieves murales de Kurt Lettow",

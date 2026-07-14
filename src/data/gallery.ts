@@ -32,9 +32,9 @@ export const galleryItems: GalleryItem[] = [
     title: "Portale und Wandgestaltungen",
     date: "Öffentlicher Raum",
     description: "Kunst im öffentlichen Raum, an Fassaden, Portalen und Wandflächen.",
-    image: "/images/archive-documents-placeholder.webp",
-    alt: "Platzhalter für Portale und Wandgestaltungen",
-    position: "25% 55%",
+    image: "/images/public-art-portal-facade.jpg",
+    alt: "Portale und Wandgestaltung von Kurt Lettow im öffentlichen Raum",
+    position: "50% 50%",
   },
   {
     category: "Wandreliefs",
