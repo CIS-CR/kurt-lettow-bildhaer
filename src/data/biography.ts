@@ -7,6 +7,9 @@ export type BiographyChapter = {
   image?: string;
   imageAlt?: string;
   imagePosition?: string;
+  imageRatio?: string;
+  imageWidth?: number;
+  imageHeight?: number;
 };
 
 export const biographyChapters: BiographyChapter[] = [
@@ -58,8 +61,11 @@ export const biographyChapters: BiographyChapter[] = [
       "Bald wurde Kurt Lettow weit über Bremen hinaus bekannt. Seine religiösen und weltlichen Werke sind im ganzen norddeutschen Raum zu finden - in Kirchen, Schulen, öffentlichen Gebäuden, auf Plätzen und in privaten Sammlungen.",
       "Mit großer Ausdruckskraft und handwerklichem Können arbeitete er unermüdlich in unterschiedlichen Materialien: Ton, Holz, Stein, Keramik, Sgraffito, Emaille, Mosaik, Gips, Glas und Metall. Besonders deutlich wird sein Gespür für Relief, Raum und Architektur: seine Werke entfalten ihre Wirkung nicht isoliert, sondern im Dialog mit dem Ort.",
     ],
-    image: "/images/kurt-letow-a-body-of-work.jpg",
+    image: "/images/a body of work in northn germany.jpg",
     imageAlt: "Werk von Kurt Lettow im norddeutschen Raum",
     imagePosition: "50% 50%",
+    imageRatio: "1080 / 1701",
+    imageWidth: 1080,
+    imageHeight: 1701,
   },
 ];
