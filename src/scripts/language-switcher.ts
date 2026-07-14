@@ -457,6 +457,10 @@ const textTranslations: Record<string, Translation> = {
     en: "PDF · Complete publication · 240 pages",
     es: "PDF · Publicación completa · 240 páginas",
   },
+  "Buchcover Kurt Lettow, Bildhauer, 1908-1992": {
+    en: "Book cover Kurt Lettow, Sculptor, 1908-1992",
+    es: "Portada del libro Kurt Lettow, escultor, 1908-1992",
+  },
   "400 farbige Abbildungen": { en: "400 color illustrations", es: "400 ilustraciones en color" },
   "Rasch-Verlag, 2012": { en: "Rasch Verlag, 2012", es: "Rasch-Verlag, 2012" },
   "Mit Beiträgen von Dr. Frank Laukötter, Dr. Arie Hartog, Prof. Dr. Georg Skalecki, Pastor Achim Kunze, Rebekka Schwiddessen und weiteren Fachleuten.": {
