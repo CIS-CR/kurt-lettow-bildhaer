@@ -50,8 +50,8 @@ export const galleryItems: GalleryItem[] = [
     title: "Modelle und Entwürfe",
     date: "Entwurfsprozess",
     description: "Gipsmodelle, Skizzen und Arbeitsmodelle aus dem Nachlass.",
-    image: "/images/family-archive-placeholder.webp",
-    alt: "Platzhalter für Skizzen und Modelle aus dem Atelier",
+    image: "/images/plaster-models-and-sketches.jpg",
+    alt: "Gipsmodelle, Skizzen und Arbeitsmodelle aus dem Nachlass von Kurt Lettow",
   },
   {
     category: "Dokumente",

@@ -668,6 +668,10 @@ const attributeTranslations: Record<string, Translation> = {
     en: "Placeholder for sketches and models from the studio",
     es: "Marcador para bocetos y modelos del atelier",
   },
+  "Gipsmodelle, Skizzen und Arbeitsmodelle aus dem Nachlass von Kurt Lettow": {
+    en: "Plaster models, sketches and working models from Kurt Lettow's estate",
+    es: "Modelos de yeso, bocetos y modelos de trabajo del legado de Kurt Lettow",
+  },
   "Platzhalter für Materialstudien und Werkstoffe": {
     en: "Placeholder for material studies and materials",
     es: "Marcador para estudios de materiales y materias primas",
