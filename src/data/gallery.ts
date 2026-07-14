@@ -41,9 +41,9 @@ export const galleryItems: GalleryItem[] = [
     title: "Licht und Fläche",
     date: "Architekturbezogene Kunst",
     description: "Reduzierte Formen, rhythmische Flächen und eine stille, klare Präsenz.",
-    image: "/images/archive-documents-placeholder.webp",
-    alt: "Platzhalter für Wandreliefs von Kurt Lettow",
-    position: "78% 42%",
+    image: "/images/kurt-letow-Wall reliefs.jpg",
+    alt: "Wandrelief von Kurt Lettow mit rhythmischen Flächen",
+    position: "50% 50%",
   },
   {
     category: "Gipsmodelle",
