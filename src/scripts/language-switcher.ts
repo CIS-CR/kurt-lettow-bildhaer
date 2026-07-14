@@ -214,7 +214,6 @@ const textTranslations: Record<string, Translation> = {
     en: "Lettow's works include Christian and secular pieces, reliefs, sculptures, portals and wall designs. They reveal a subtle play of light and shadow, a reduced formal language and a quiet force that leaves room for contemplation and interpretation.",
     es: "Las obras de Lettow comprenden piezas cristianas y profanas, relieves, esculturas, portales y diseños murales. Muestran un delicado juego de luz y sombra, un lenguaje formal reducido y una fuerza silenciosa que deja espacio para la contemplación y la interpretación.",
   },
-  "Archiv öffnen": { en: "Open archive", es: "Abrir archivo" },
   Reliefs: { en: "Reliefs", es: "Relieves" },
   "Reliefs und Plastiken": { en: "Reliefs and Sculptures", es: "Relieves y esculturas" },
   Werkgruppe: { en: "Work group", es: "Grupo de obra" },
