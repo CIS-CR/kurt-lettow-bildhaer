@@ -676,6 +676,10 @@ const attributeTranslations: Record<string, Translation> = {
     en: "Placeholder for material studies and materials",
     es: "Marcador para estudios de materiales y materias primas",
   },
+  "Fotografien und Archivdokumente aus dem Nachlass von Kurt Lettow": {
+    en: "Photographs and archive documents from Kurt Lettow's estate",
+    es: "Fotografías y documentos de archivo del legado de Kurt Lettow",
+  },
 };
 
 const titleTranslations: Record<string, Translation> = {

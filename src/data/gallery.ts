@@ -58,8 +58,8 @@ export const galleryItems: GalleryItem[] = [
     title: "Fotografien und Archiv",
     date: "Werkstoffe",
     description: "Dokumente, Fotografien und Spuren vom Auftrag bis zur Ausführung.",
-    image: "/images/family-archive-placeholder.webp",
-    alt: "Platzhalter für Materialstudien und Werkstoffe",
-    position: "75% 35%",
+    image: "/images/photographs-and-archive-documents.jpg",
+    alt: "Fotografien und Archivdokumente aus dem Nachlass von Kurt Lettow",
+    position: "50% 50%",
   },
 ];
