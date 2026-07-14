@@ -32,7 +32,7 @@ export const biographyChapters: BiographyChapter[] = [
       "Der erste große Auftrag kam 1930, als Lettow 22 Jahre alt war: ein Orgelprospekt aus Lindenholz für die St. Ulrichkirche in Halle, mit sechs Figuren und Ornamentik.",
       "1931 folgte ein überlebensgroßes Kruzifix für den neuen katholischen Friedhof in Delmenhorst, danach eine lebensgroße heilige Elisabeth für das Arbeitsamt in Vechta sowie weitere Aufträge und Restaurierungen.",
     ],
-    image: "/images/biography/kurt-lettow-erster-auftrag.jpg?v=977acbc",
+    image: "/images/kurt-lettow-first-major-commission.jpg",
     imageAlt: "Frühe bildhauerische Arbeit von Kurt Lettow",
     imagePosition: "50% 50%",
   },

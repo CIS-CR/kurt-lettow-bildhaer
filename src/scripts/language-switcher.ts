@@ -336,13 +336,13 @@ const textTranslations: Record<string, Translation> = {
   },
   "Hommage und Wiederentdeckung": { en: "Homage and Rediscovery", es: "Homenaje y redescubrimiento" },
   Bremerhaven: { en: "Bremerhaven", es: "Bremerhaven" },
-  "Als Julia van Wilpe im Sommer 2010 in Costa Rica von den Abrissplänen einer Kirche in Bremerhaven erfuhr - und davon, dass ein großes Relief ihres Vaters verschwinden sollte - begann eine Suche.": {
-    en: "When Julia van Wilpe learned in Costa Rica in the summer of 2010 about the planned demolition of a church in Bremerhaven, and that a large relief by her father was to disappear, a search began.",
-    es: "Cuando Julia van Wilpe supo en Costa Rica, en el verano de 2010, de los planes de demolición de una iglesia en Bremerhaven, y de que un gran relieve de su padre podía desaparecer, comenzó una búsqueda.",
+  "Als seine Tochter Julia Lettow van Wilpe im Sommer 2010 in Costa Rica von den Abrissplänen einer Kirche in Bremerhaven erfuhr - und davon, dass ein großes Relief ihres Vaters verschwinden sollte - begann eine Suche.": {
+    en: "When his daughter, Julia Lettow van Wilpe, learned in Costa Rica in the summer of 2010 about the planned demolition of a church in Bremerhaven, and that a large relief by her father was to disappear, a search began.",
+    es: "Cuando su hija, Julia Lettow van Wilpe, supo en Costa Rica, en el verano de 2010, de los planes de demolición de una iglesia en Bremerhaven, y de que un gran relieve de su padre podía desaparecer, comenzó una búsqueda.",
   },
-  "Aus diesem Moment entstand der Wunsch, die erhaltenen Werke Kurt Lettows aufzuspüren, zu fotografieren, zu ordnen und sichtbar zu machen. Eine Reise durch Städte und Dörfer Norddeutschlands begann: zu Kirchen, Schulen, Plätzen, Portalen und majestätischen Wandreliefs.": {
-    en: "From that moment came the wish to trace, photograph, order and make visible the surviving works of Kurt Lettow. A journey through the cities and villages of northern Germany began: to churches, schools, squares, portals and majestic wall reliefs.",
-    es: "De ese momento nació el deseo de localizar, fotografiar, ordenar y hacer visibles las obras conservadas de Kurt Lettow. Comenzó un viaje por ciudades y pueblos del norte de Alemania: hacia iglesias, escuelas, plazas, portales y majestuosos relieves murales.",
+  "Aus diesem Moment entstand der Wunsch, die erhaltenen Werke Kurt Lettows aufzuspüren, zu fotografieren, zu ordnen und sichtbar zu machen. Eine zweijährige Reise durch Städte und Dörfer Norddeutschlands begann: zu Kirchen, Schulen, Plätzen, Portalen und majestätischen Wandreliefs.": {
+    en: "From that moment came the wish to trace, photograph, order and make visible the surviving works of Kurt Lettow. A two-year journey through the cities and villages of northern Germany began: to churches, schools, squares, portals and majestic wall reliefs.",
+    es: "De ese momento nació el deseo de localizar, fotografiar, ordenar y hacer visibles las obras conservadas de Kurt Lettow. Comenzó un viaje de dos años por ciudades y pueblos del norte de Alemania: hacia iglesias, escuelas, plazas, portales y majestuosos relieves murales.",
   },
   "Bald wurde Kurt Lettow weit über Bremen hinaus bekannt. Seine religiösen und weltlichen Werke sind im ganzen norddeutschen Raum zu finden - in Kirchen, Schulen, öffentlichen Gebäuden, auf Plätzen und in privaten Sammlungen.": {
     en: "Kurt Lettow soon became known far beyond Bremen. His religious and secular works can be found throughout northern Germany, in churches, schools, public buildings, squares and private collections.",
