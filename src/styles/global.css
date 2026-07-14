@@ -459,9 +459,11 @@ h3 { font-size: 28px; }
   transition: transform .9s ease, filter .9s ease;
 }
 .biography__media--custom-ratio .biography__image {
+  display: block;
   height: 100%;
-  max-height: 760px;
-  aspect-ratio: var(--biography-image-ratio);
+  max-height: none;
+  aspect-ratio: auto;
+  transform: none;
 }
 .reveal-enabled .biography__chapter {
   opacity: 0;
