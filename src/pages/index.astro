@@ -10,6 +10,7 @@ import { biographyChapters } from "../data/biography";
 const memoryHighlights = ["Bremerhaven", "Norddeutschland", "Kirchen", "Schulen", "Plätze", "Portale", "Wandreliefs", "Dokumentation"];
 const archiveHighlights = ["Reliefs", "Plastiken", "Portale", "Wandreliefs", "Kirchenräume", "Skizzen", "Gipsmodelle", "Dokumente", "Sgraffito", "Emaille", "Mosaik", "Glas", "Metall"];
 const formImage = "/images/for-narrative-detail.jpg";
+const bookPdfUrl = "https://pub-ea44c14188ea4c7593df2683529ba5b3.r2.dev/Kurtlettowbildhauerbook.pdf";
 ---
 
 <BaseLayout
@@ -134,11 +135,20 @@ const formImage = "/images/for-narrative-detail.jpg";
     <div class="shell book-grid">
       <div data-reveal>
         <p class="eyebrow">Das Buch</p>
-        <h2 id="book-title">Kurt Lettow, Bildhauer, 1908-1992<br />Über die Grenzen Bremens hinaus</h2>
+        <h2 id="book-title">Kurt Lettow, Bildhauer, 1908-1992</h2>
+        <p class="book-subtitle">Über die Grenzen Bremens hinaus</p>
         <p>Aus der Suche nach den erhaltenen Werken entstand das Buch „Kurt Lettow, Bildhauer, 1908-1992. Über die Grenzen Bremens hinaus“.</p>
         <p>Es umfasst 240 Seiten und 400 farbige Abbildungen und erschien begleitend zur Ausstellung „Nachkriegskirchenkunst Ästhetik: Lettow“ in der Kulturkirche St. Stephani in Bremen, die vom 7. Juni bis zum 26. August 2012 gezeigt wurde.</p>
         <p>Das Buch dokumentiert das große christliche wie weltliche Werk Lettows im norddeutschen Raum und macht die Vielfalt seiner Materialien, Orte und Formen sichtbar.</p>
-        <a class="button button-outline" href="/references">Publikation ansehen</a>
+        <div class="book-download">
+          <a class="book-download__button" href={bookPdfUrl} target="_blank" rel="noopener noreferrer" download>
+            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+              <path d="M12 3v12m0 0 4-4m-4 4-4-4M5 19h14" />
+            </svg>
+            <span>Buch herunterladen</span>
+          </a>
+          <p>PDF · Vollständige Publikation · 240 Seiten</p>
+        </div>
       </div>
       <aside class="book-facts" data-reveal>
         <p>Kurt Lettow, Bildhauer, 1908-1992<br />Über die Grenzen Bremens hinaus</p>

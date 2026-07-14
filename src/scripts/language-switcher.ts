@@ -452,6 +452,11 @@ const textTranslations: Record<string, Translation> = {
     en: "The book documents Lettow's major Christian and secular work in northern Germany and makes visible the diversity of his materials, places and forms.",
     es: "El libro documenta la gran obra cristiana y profana de Lettow en el norte de Alemania y hace visible la diversidad de sus materiales, lugares y formas.",
   },
+  "Buch herunterladen": { en: "Download the book", es: "Descargar el libro" },
+  "PDF · Vollständige Publikation · 240 Seiten": {
+    en: "PDF · Complete publication · 240 pages",
+    es: "PDF · Publicación completa · 240 páginas",
+  },
   "400 farbige Abbildungen": { en: "400 color illustrations", es: "400 ilustraciones en color" },
   "Rasch-Verlag, 2012": { en: "Rasch Verlag, 2012", es: "Rasch-Verlag, 2012" },
   "Mit Beiträgen von Dr. Frank Laukötter, Dr. Arie Hartog, Prof. Dr. Georg Skalecki, Pastor Achim Kunze, Rebekka Schwiddessen und weiteren Fachleuten.": {
