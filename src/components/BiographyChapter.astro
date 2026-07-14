@@ -19,7 +19,10 @@ const reverse = index % 2 === 1;
     </div>
   </div>
   {chapter.image && (
-    <figure class="biography__media" style={chapter.imageRatio ? `--biography-image-ratio:${chapter.imageRatio}` : undefined}>
+    <figure
+      class:list={["biography__media", { "biography__media--custom-ratio": chapter.imageRatio }]}
+      style={chapter.imageRatio ? `--biography-image-ratio:${chapter.imageRatio}` : undefined}
+    >
       <img
         class="biography__image"
         src={chapter.image}
