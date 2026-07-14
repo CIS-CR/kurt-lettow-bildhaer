@@ -169,16 +169,25 @@ const formImage = "/images/for-narrative-detail.jpg";
   </section>
 
   <section class="legacy-section scroll-scene" id="legacy" aria-labelledby="legacy-title">
-    <div class="shell legacy-inner" data-reveal>
-      <p class="eyebrow light">Das wiederentdeckte Werk</p>
-      <h2 id="legacy-title">Ich wusste, dass mein Vater ein bekannter und gefragter Künstler war und dass seine Arbeiten bewundert wurden.</h2>
-      <p>Doch das Ausmaß, die Vielfalt und die Größe seines Werkes wurden mir erst bewusst, als er nicht mehr an unserer Seite war.</p>
-      <p>Heute betrete ich sein Atelier mit Andacht - und diese Andacht verwandelt sich bald in eine unstillbare Neugier.</p>
-      <p>Ich versuche, sein Werk zu erfassen, zu dokumentieren und sichtbar zu machen. Dabei wächst in mir eine tiefe Bewunderung für meinen Vater, den Künstler.</p>
-      <p class="legacy-signature">Julia van Wilpe, geb. Lettow<br />Tochter des Bildhauers</p>
+    <div class="shell legacy-inner" data-reveal data-scroll-scene="legacy">
+      <div class="legacy-copy">
+        <p class="eyebrow light">Das wiederentdeckte Werk</p>
+        <h2 id="legacy-title">Ich wusste, dass mein Vater ein bekannter und gefragter Künstler war und dass seine Arbeiten bewundert wurden.</h2>
+        <p>Doch das Ausmaß, die Vielfalt und die Größe seines Werkes wurden mir erst bewusst, als er nicht mehr an unserer Seite war.</p>
+        <p>Heute betrete ich sein Atelier mit Andacht - und diese Andacht verwandelt sich bald in eine unstillbare Neugier.</p>
+        <p>Ich versuche, sein Werk zu erfassen, zu dokumentieren und sichtbar zu machen. Dabei wächst in mir eine tiefe Bewunderung für meinen Vater, den Künstler.</p>
+        <p class="legacy-signature">Julia van Wilpe, geb. Lettow<br />Tochter des Bildhauers</p>
+      </div>
+      <figure class="legacy-media" data-legacy-media>
+        <img src="/images/julia i knew thar my father.jpg" alt="Julia van Wilpe erinnert sich an das wiederentdeckte Werk ihres Vaters" loading="lazy" width="1080" height="1334" />
+      </figure>
       <span class="legacy-mark" aria-hidden="true">KL</span>
     </div>
   </section>
+
+  <script>
+    import "../scripts/legacy-scroll";
+  </script>
 
   <section class="closing-section contact-section" id="kontakt" aria-labelledby="contact-title">
     <div class="shell contact-grid" data-reveal>
