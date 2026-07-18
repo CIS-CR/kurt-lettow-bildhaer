@@ -919,8 +919,9 @@ h3 { font-size: 28px; }
     inset: auto;
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
+    aspect-ratio: auto;
+    object-fit: contain;
+    filter: brightness(.82) saturate(.72);
   }
   .generations-banner .scroll-stop-shade {
     display: none;
