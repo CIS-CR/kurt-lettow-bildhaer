@@ -15,7 +15,10 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
 body {
   margin: 0;
   background: var(--paper);
@@ -24,13 +27,14 @@ body {
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
 }
 body, button, a { letter-spacing: 0; }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
 button { font: inherit; }
 
-.shell { width: min(var(--shell), calc(100% - 40px)); margin-inline: auto; }
+.shell { width: min(var(--shell), calc(100% - 40px)); max-width: 100%; margin-inline: auto; }
 .skip-link { position: fixed; top: 8px; left: 8px; z-index: 200; padding: 10px 14px; background: #fff; color: #000; transform: translateY(-150%); }
 .skip-link:focus { transform: translateY(0); }
 
@@ -866,6 +870,16 @@ h3 { font-size: 28px; }
 
 @media (max-width: 620px) {
   .shell { width: min(100% - 28px, var(--shell)); }
+  .site-header,
+  .hero,
+  .hero__media,
+  .hero-inner,
+  main,
+  section,
+  footer {
+    max-width: 100vw;
+    overflow-x: clip;
+  }
   .header-inner { min-height: 72px; }
   .wordmark { font-size: 14px; }
   .wordmark-mark { width: 29px; height: 29px; }
