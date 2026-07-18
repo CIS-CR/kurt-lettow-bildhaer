@@ -908,6 +908,27 @@ h3 { font-size: 28px; }
   .intro-media { max-width: none; }
   .lead { font-size: 21px; }
   .scroll-stop { min-height: 580px; height: 76vh; }
+  .generations-banner {
+    min-height: 0;
+    height: auto;
+    display: block;
+    background: #20231f;
+  }
+  .generations-banner > img {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+  .generations-banner .scroll-stop-shade {
+    display: none;
+  }
+  .generations-banner .scroll-stop-inner {
+    padding-top: 42px;
+    padding-bottom: 58px;
+  }
   .scroll-stop-inner { padding-bottom: 52px; }
   .scroll-stop blockquote { font-size: 40px; }
   .scroll-stop-copy { font-size: 16px; }
