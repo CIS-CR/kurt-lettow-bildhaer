@@ -8,7 +8,16 @@ import ScrollStopSection from "../components/ScrollStopSection.astro";
 import { biographyChapters } from "../data/biography";
 
 const memoryHighlights = ["Bremerhaven", "Norddeutschland", "Kirchen", "Schulen", "Plätze", "Portale", "Wandreliefs", "Dokumentation"];
-const archiveHighlights = ["Reliefs", "Plastiken", "Portale", "Wandreliefs", "Kirchenräume", "Skizzen", "Gipsmodelle", "Dokumente", "Sgraffito", "Emaille", "Mosaik", "Glas", "Metall"];
+const archiveHighlightGroups = [
+  {
+    title: "Werkarten",
+    items: ["Reliefs", "Plastiken", "Portale", "Wandreliefs", "Kirchenräume", "Skizzen", "Gipsmodelle", "Dokumente"],
+  },
+  {
+    title: "Techniken und Materialien",
+    items: ["Sgraffito", "Emaille", "Mosaik", "Glas", "Metall"],
+  },
+];
 const formImage = "/images/for-narrative-detail.jpg";
 const bookPdfUrl = "https://pub-ea44c14188ea4c7593df2683529ba5b3.r2.dev/kurt-lettow-bildhauer-book.pdf";
 ---
@@ -129,7 +138,7 @@ const bookPdfUrl = "https://pub-ea44c14188ea4c7593df2683529ba5b3.r2.dev/kurt-let
     </div>
   </section>
 
-  <GalleryGrid highlights={archiveHighlights} />
+  <GalleryGrid highlightGroups={archiveHighlightGroups} />
 
   <section class="book-section scroll-scene" id="buch" aria-labelledby="book-title">
     <div class="shell book-grid">

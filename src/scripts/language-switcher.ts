@@ -210,6 +210,8 @@ const textTranslations: Record<string, Translation> = {
   },
   "Werk und Archiv": { en: "Work and Archive", es: "Obra y archivo" },
   "Ein Werk in vielen Materialien.": { en: "A body of work in many materials.", es: "Una obra en muchos materiales." },
+  Werkarten: { en: "Types of work", es: "Tipos de obra" },
+  "Techniken und Materialien": { en: "Techniques and materials", es: "Técnicas y materiales" },
   "Lettows Arbeiten umfassen christliche und weltliche Werke, Reliefs, Plastiken, Portale und Wandgestaltungen. Sie zeigen ein feines Spiel von Licht und Schatten, eine reduzierte Formensprache und eine stille Kraft, die Raum für Betrachtung und Interpretation lässt.": {
     en: "Lettow's works include Christian and secular pieces, reliefs, sculptures, portals and wall designs. They reveal a subtle play of light and shadow, a reduced formal language and a quiet force that leaves room for contemplation and interpretation.",
     es: "Las obras de Lettow comprenden piezas cristianas y profanas, relieves, esculturas, portales y diseños murales. Muestran un delicado juego de luz y sombra, un lenguaje formal reducido y una fuerza silenciosa que deja espacio para la contemplación y la interpretación.",

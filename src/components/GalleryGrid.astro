@@ -3,9 +3,18 @@ import { galleryItems } from "../data/gallery";
 
 interface Props {
   highlights?: string[];
+  highlightGroups?: Array<{
+    title: string;
+    items: string[];
+  }>;
 }
 
-const { highlights = [] } = Astro.props;
+const { highlights = [], highlightGroups = [] } = Astro.props;
+const groups = highlightGroups.length
+  ? highlightGroups
+  : highlights.length
+    ? [{ title: "", items: highlights }]
+    : [];
 ---
 
 <section class="archive-section scroll-scene" id="archive" aria-labelledby="archive-title" data-scroll-scene="archive">
@@ -26,9 +35,16 @@ const { highlights = [] } = Astro.props;
       <p>Diese Modelle zeigen unterschiedliche Phasen: erste Entwürfe zu Komposition, Proportion und räumlichem Zusammenhang, aber auch Modelle, die mithilfe einer Punktiermaschine in Holz oder Stein übertragen wurden.</p>
       <p>Fotografien, Skizzen und zahlreiche Dokumente machen den Weg vom Auftrag bis zur Ausführung nachvollziehbar und vermitteln einen Eindruck von den Bedingungen, unter denen Lettow arbeitete.</p>
     </div>
-    {highlights.length > 0 && (
+    {groups.length > 0 && (
       <div class="archive-highlights" aria-label="Archivkategorien" data-reveal>
-        {highlights.map((highlight) => <span>{highlight}</span>)}
+        {groups.map((group) => (
+          <section class="archive-highlights__group" aria-label={group.title || "Archivkategorien"}>
+            {group.title && <h3>{group.title}</h3>}
+            <ul>
+              {group.items.map((highlight) => <li>{highlight}</li>)}
+            </ul>
+          </section>
+        ))}
       </div>
     )}
     <div class="archive-grid">
